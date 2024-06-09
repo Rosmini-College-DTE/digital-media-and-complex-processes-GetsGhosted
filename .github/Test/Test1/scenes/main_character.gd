@@ -12,7 +12,7 @@ func _physics_process(delta):
 	elif direction.x !=0 or direction.y != 0:
 		player_state = "running"
 	elif direction.x !=1 or direction.y != 1:
-		player_state = "oop-running"
+		player_state = "opp-running"
 		
 	velocity = direction * speed
 	move_and_slide()
