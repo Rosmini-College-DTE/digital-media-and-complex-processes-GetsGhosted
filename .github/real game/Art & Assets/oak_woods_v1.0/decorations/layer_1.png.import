@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://guywwyvup54"
-path="res://.godot/imported/layer_2.png-9c413f9dc6bf4164c8c585332723fd48.ctex"
+uid="uid://cv8wfnp3nwnkc"
+path="res://.godot/imported/layer_1.png-db6cc5d98452f01bae236623722c11b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art & Assets/Medieval_Castle_Asset_Pack/Background/layer_2.png"
-dest_files=["res://.godot/imported/layer_2.png-9c413f9dc6bf4164c8c585332723fd48.ctex"]
+source_file="res://Art & Assets/oak_woods_v1.0/decorations/layer_1.png"
+dest_files=["res://.godot/imported/layer_1.png-db6cc5d98452f01bae236623722c11b1.ctex"]
 
 [params]
 
