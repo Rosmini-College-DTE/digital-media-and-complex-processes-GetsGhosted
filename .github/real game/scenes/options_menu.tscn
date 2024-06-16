@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://y4fffm25mvb"]
 
-[ext_resource type="Script" path="res://Menu.gd" id="1_bisyn"]
+[ext_resource type="Script" path="res://scenes/options_menu.gd" id="1_4juau"]
 [ext_resource type="FontFile" uid="uid://cm531s6tbnrut" path="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/HomeVideo-Regular.otf" id="2_qa0q3"]
 
 [node name="Menu" type="Control"]
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_bisyn")
+script = ExtResource("1_4juau")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -24,3 +24,5 @@ layout_mode = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_qa0q3")
 text = "Back to Menu"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back to Menu" to="." method="_on_back_to_menu_pressed"]
