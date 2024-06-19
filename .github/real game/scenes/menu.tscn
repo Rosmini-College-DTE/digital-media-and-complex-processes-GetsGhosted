@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cqn310ds07nla"]
+[gd_scene load_steps=8 format=3 uid="uid://cqn310ds07nla"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_3m6ok"]
 [ext_resource type="FontFile" uid="uid://cm531s6tbnrut" path="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/HomeVideo-Regular.otf" id="2_27qsw"]
-[ext_resource type="Texture2D" uid="uid://dny4jlkdvd850" path="res://Art & Assets/Medieval Castle 2D Background/12o1.jpg" id="2_kxk3m"]
+[ext_resource type="Texture2D" uid="uid://hog13pkpgpsm" path="res://Art & Assets/MoonGraveyard/Background_0.png" id="2_sxtbn"]
+[ext_resource type="Script" path="res://scenes/Background0.gd" id="3_ckw3n"]
 
 [sub_resource type="Animation" id="Animation_a2ykg"]
 resource_name = "fade_in"
@@ -74,7 +75,7 @@ grow_vertical = 2
 script = ExtResource("1_3m6ok")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(366, 193)
+position = Vector2(578, 323)
 
 [node name="Transition" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Camera2D")
@@ -84,37 +85,57 @@ libraries = {
 
 [node name="ColorRect" type="ColorRect" parent="Transition"]
 visible = false
-self_modulate = Color(1, 1, 1, 0)
-offset_left = -140.0
-offset_top = -67.0
-offset_right = 1086.0
-offset_bottom = 667.0
+anchors_preset = -1
+anchor_right = 0.119792
+anchor_bottom = 0.114198
+offset_left = -58.0
+offset_top = -65.0
+offset_right = 1168.0
+offset_bottom = 669.0
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="darkclouds" type="Node2D" parent="."]
+
+[node name="Background0" type="Sprite2D" parent="darkclouds"]
+texture_filter = 1
+position = Vector2(-122, -108)
+scale = Vector2(1.83659, 2.05769)
+texture = ExtResource("2_sxtbn")
+centered = false
+offset = Vector2(-24.215, -15.005)
+flip_h = true
+script = ExtResource("3_ckw3n")
+
+[node name="bg object 1" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -41.0
-offset_top = -2.0
-offset_right = 727.0
-offset_bottom = 510.0
-texture = ExtResource("2_kxk3m")
+offset_left = 170.0
+offset_top = 541.0
+offset_right = 353.0
+offset_bottom = 730.0
+flip_h = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 124.0
-offset_right = 107.0
-offset_bottom = 201.0
+offset_left = 31.0
+offset_top = 227.0
+offset_right = 395.0
+offset_bottom = 458.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 12
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_27qsw")
-theme_override_font_sizes/font_size = 24
-text = "Game Title"
+theme_override_font_sizes/font_size = 56
+text = "idk name??"
+horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -122,17 +143,29 @@ theme_override_fonts/font = ExtResource("2_27qsw")
 
 [node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.215686, 0.403922, 0.501961, 1)
 theme_override_fonts/font = ExtResource("2_27qsw")
+theme_override_font_sizes/font_size = 48
 text = "Play"
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_27qsw")
 
 [node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.215686, 0.403922, 0.501961, 1)
 theme_override_fonts/font = ExtResource("2_27qsw")
+theme_override_font_sizes/font_size = 24
 text = "Options"
 
 [node name="Quit Game" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.494245, 1.40181e-06, 2.40654e-07, 1)
+theme_override_colors/font_hover_color = Color(0.736101, 0, 0.126668, 1)
 theme_override_fonts/font = ExtResource("2_27qsw")
+theme_override_font_sizes/font_size = 24
 text = "Quit Game"
 
 [connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]

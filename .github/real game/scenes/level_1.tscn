@@ -2530,6 +2530,7 @@ libraries = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="Transition"]
+visible = false
 anchors_preset = -1
 anchor_left = -0.676215
 anchor_top = -0.410494
@@ -2616,6 +2617,15 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_7a63t")
 
+[node name="Label" type="Label" parent="."]
+offset_left = 219.0
+offset_top = 190.0
+offset_right = 345.0
+offset_bottom = 222.0
+theme_override_fonts/font = ExtResource("11_lh56m")
+theme_override_font_sizes/font_size = 24
+text = "The Woods"
+
 [node name="Background Objects" type="Node2D" parent="."]
 
 [node name="Lamp" type="Sprite2D" parent="Background Objects"]
@@ -2658,16 +2668,8 @@ remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-28, 207)
+zoom = Vector2(2.695, 2.695)
 process_callback = 0
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
-
-[node name="Label" type="Label" parent="."]
-offset_left = 420.0
-offset_top = 186.0
-offset_right = 546.0
-offset_bottom = 218.0
-theme_override_fonts/font = ExtResource("11_lh56m")
-theme_override_font_sizes/font_size = 24
-text = "The Woods"

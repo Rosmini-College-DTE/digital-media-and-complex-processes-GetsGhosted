@@ -1,7 +1,68 @@
-[gd_scene load_steps=3 format=3 uid="uid://y4fffm25mvb"]
+[gd_scene load_steps=7 format=3 uid="uid://y4fffm25mvb"]
 
 [ext_resource type="Script" path="res://scenes/options_menu.gd" id="1_4juau"]
+[ext_resource type="Texture2D" uid="uid://bek7pvtmgweuw" path="res://Art & Assets/PixelFantasy_Caves_1.0/background1.png" id="2_c2oot"]
 [ext_resource type="FontFile" uid="uid://cm531s6tbnrut" path="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/HomeVideo-Regular.otf" id="2_qa0q3"]
+
+[sub_resource type="Animation" id="Animation_a2ykg"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ox3l0"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xk8hm"]
+_data = {
+"fade_in": SubResource("Animation_a2ykg"),
+"fade_out": SubResource("Animation_ox3l0")
+}
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -12,17 +73,57 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4juau")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(574, 324)
+
+[node name="Transition" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Camera2D")
+libraries = {
+"": SubResource("AnimationLibrary_xk8hm")
+}
+
+[node name="ColorRect" type="ColorRect" parent="Transition"]
+visible = false
+anchors_preset = -1
+anchor_left = -0.676215
+anchor_top = -0.410494
+anchor_right = 0.0321181
+anchor_bottom = -0.029321
+offset_left = -140.0
+offset_top = -67.0
+offset_right = 1086.0
+offset_bottom = 667.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_c2oot")
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 21.0
+offset_top = 549.0
+offset_right = 461.0
+offset_bottom = 632.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
 [node name="Back to Menu" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_qa0q3")
+theme_override_font_sizes/font_size = 56
 text = "Back to Menu"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back to Menu" to="." method="_on_back_to_menu_pressed"]
