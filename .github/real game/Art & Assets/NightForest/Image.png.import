@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjol2sfsmnbv4"
-path="res://.godot/imported/9241 shimmer filter.jpg-deae59a156d0ca1e7814412f7a585ee9.ctex"
+uid="uid://dcjwenj5u66tr"
+path="res://.godot/imported/Image.png-3df78191382b55bc4bea7f5655d548c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art & Assets/Medieval Castle 2D Background/9241 shimmer filter.jpg"
-dest_files=["res://.godot/imported/9241 shimmer filter.jpg-deae59a156d0ca1e7814412f7a585ee9.ctex"]
+source_file="res://Art & Assets/NightForest/Image.png"
+dest_files=["res://.godot/imported/Image.png-3df78191382b55bc4bea7f5655d548c7.ctex"]
 
 [params]
 

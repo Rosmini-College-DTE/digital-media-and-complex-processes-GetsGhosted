@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cm6nycahsavfa"
-path="res://.godot/imported/12731.jpg-a98f71b15aee5481f0c9deeed4f21cf1.ctex"
+uid="uid://c6h6qgvhgp5bk"
+path="res://.godot/imported/dimred_Idle.png-625f028b378b692c23660be2e234a30a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art & Assets/Medieval Castle 2D Background/12731.jpg"
-dest_files=["res://.godot/imported/12731.jpg-a98f71b15aee5481f0c9deeed4f21cf1.ctex"]
+source_file="res://Art & Assets/Extra Knights/dimred_Idle.png"
+dest_files=["res://.godot/imported/dimred_Idle.png-625f028b378b692c23660be2e234a30a.ctex"]
 
 [params]
 

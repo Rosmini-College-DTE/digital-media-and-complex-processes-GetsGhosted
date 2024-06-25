@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dny4jlkdvd850"
-path="res://.godot/imported/12o1.jpg-575861552c4a629acdaa7d8823c9fa92.ctex"
+uid="uid://d0ddm2r1ja35y"
+path="res://.godot/imported/5.png-7df87187df52baba5bf63542f97a0cba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art & Assets/Medieval Castle 2D Background/12o1.jpg"
-dest_files=["res://.godot/imported/12o1.jpg-575861552c4a629acdaa7d8823c9fa92.ctex"]
+source_file="res://Art & Assets/NightForest/Layers/5.png"
+dest_files=["res://.godot/imported/5.png-7df87187df52baba5bf63542f97a0cba.ctex"]
 
 [params]
 
