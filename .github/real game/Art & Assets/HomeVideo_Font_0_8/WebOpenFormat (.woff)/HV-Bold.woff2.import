@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cxf5evfx7b4jo"
-path="res://.godot/imported/HV-Bold.woff2-5baf656c7343c064d744fc5c5642354b.fontdata"
+path="res://.godot/imported/HV-Bold.woff2-9802e00764e19cef29ce3f7ed1a558a5.fontdata"
 
 [deps]
 
-source_file="res://Art & Assets/HomeVideo_Font_0_8/Web Open Font Format (.woff)/HV-Bold.woff2"
-dest_files=["res://.godot/imported/HV-Bold.woff2-5baf656c7343c064d744fc5c5642354b.fontdata"]
+source_file="res://Art & Assets/HomeVideo_Font_0_8/WebOpenFormat (.woff)/HV-Bold.woff2"
+dest_files=["res://.godot/imported/HV-Bold.woff2-9802e00764e19cef29ce3f7ed1a558a5.fontdata"]
 
 [params]
 
