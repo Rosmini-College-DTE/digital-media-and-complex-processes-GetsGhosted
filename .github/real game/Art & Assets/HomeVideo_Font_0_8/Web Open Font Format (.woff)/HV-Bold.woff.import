@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b5evkn7wm5axy"
-path="res://.godot/imported/BV Bold.otf-bc6c08a034deae7694808f6fd9d4b224.fontdata"
+uid="uid://dyk6i3qncdu36"
+path="res://.godot/imported/HV-Bold.woff-e1068a6f55a9883055c7fb72bcbdf3b1.fontdata"
 
 [deps]
 
-source_file="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/BV Bold.otf"
-dest_files=["res://.godot/imported/BV Bold.otf-bc6c08a034deae7694808f6fd9d4b224.fontdata"]
+source_file="res://Art & Assets/HomeVideo_Font_0_8/Web Open Font Format (.woff)/HV-Bold.woff"
+dest_files=["res://.godot/imported/HV-Bold.woff-e1068a6f55a9883055c7fb72bcbdf3b1.fontdata"]
 
 [params]
 

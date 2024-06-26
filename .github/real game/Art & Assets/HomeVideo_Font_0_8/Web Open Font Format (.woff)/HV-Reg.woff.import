@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://8yuvux084ttj"
-path="res://.godot/imported/HomeVideo-Reg.otf-583bd2fecb1e17390fed9295b0143cf7.fontdata"
+uid="uid://dqnc225suyksg"
+path="res://.godot/imported/HV-Reg.woff-b3299e050740799a55e0ff237e5d1157.fontdata"
 
 [deps]
 
-source_file="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/HomeVideo-Reg.otf"
-dest_files=["res://.godot/imported/HomeVideo-Reg.otf-583bd2fecb1e17390fed9295b0143cf7.fontdata"]
+source_file="res://Art & Assets/HomeVideo_Font_0_8/Web Open Font Format (.woff)/HV-Reg.woff"
+dest_files=["res://.godot/imported/HV-Reg.woff-b3299e050740799a55e0ff237e5d1157.fontdata"]
 
 [params]
 

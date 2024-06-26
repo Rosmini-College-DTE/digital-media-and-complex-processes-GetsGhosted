@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://warmhmb3xk8m"
-path="res://.godot/imported/HV Bold.ttf-79957000811263503e1ad16a1a7f229c.fontdata"
+uid="uid://ckrafqqbbfjt7"
+path="res://.godot/imported/HV-Reg.ttf-626fcb3e2e5dcdab603e35ed67297668.fontdata"
 
 [deps]
 
-source_file="res://Art & Assets/HomeVideo_Font_0_8/TrueType (.ttf)/HV Bold.ttf"
-dest_files=["res://.godot/imported/HV Bold.ttf-79957000811263503e1ad16a1a7f229c.fontdata"]
+source_file="res://Art & Assets/HomeVideo_Font_0_8/TrueType (.ttf)/HV-Reg.ttf"
+dest_files=["res://.godot/imported/HV-Reg.ttf-626fcb3e2e5dcdab603e35ed67297668.fontdata"]
 
 [params]
 

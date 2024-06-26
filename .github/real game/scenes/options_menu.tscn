@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/options_menu.gd" id="1_4juau"]
 [ext_resource type="Texture2D" uid="uid://bek7pvtmgweuw" path="res://Art & Assets/PixelFantasy_Caves_1.0/background1.png" id="2_c2oot"]
-[ext_resource type="FontFile" uid="uid://cm531s6tbnrut" path="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/HomeVideo-Regular.otf" id="2_qa0q3"]
+[ext_resource type="FontFile" uid="uid://b1c2n0pdq0xot" path="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/HV-Reg.otf" id="3_yptyr"]
 
 [sub_resource type="Animation" id="Animation_a2ykg"]
 resource_name = "fade_in"
@@ -122,7 +122,7 @@ layout_mode = 2
 [node name="Back to Menu" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_qa0q3")
+theme_override_fonts/font = ExtResource("3_yptyr")
 theme_override_font_sizes/font_size = 56
 text = "Back to Menu"
 
