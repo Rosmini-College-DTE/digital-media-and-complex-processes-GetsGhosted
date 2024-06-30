@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://cqn310ds07nla"]
+[gd_scene load_steps=8 format=3 uid="uid://cqn310ds07nla"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_3m6ok"]
-[ext_resource type="FontFile" path="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/HomeVideo-Regular.otf" id="2_27qsw"]
 [ext_resource type="Texture2D" uid="uid://hog13pkpgpsm" path="res://Art & Assets/MoonGraveyard/Background_0.png" id="2_sxtbn"]
 [ext_resource type="Script" path="res://scenes/Background0.gd" id="3_ckw3n"]
 [ext_resource type="FontFile" uid="uid://b1c2n0pdq0xot" path="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/HV-Reg.otf" id="4_dy5ll"]
@@ -135,12 +134,12 @@ theme_override_constants/separation = 12
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_dy5ll")
 theme_override_font_sizes/font_size = 56
-text = "idk name??"
+text = "Solo crusade"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_27qsw")
+theme_override_fonts/font = ExtResource("4_dy5ll")
 
 [node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -151,7 +150,7 @@ text = "Play"
 
 [node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_27qsw")
+theme_override_fonts/font = ExtResource("4_dy5ll")
 
 [node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

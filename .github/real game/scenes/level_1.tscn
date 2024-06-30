@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://cgeur6xemalf3"]
+[gd_scene load_steps=63 format=3 uid="uid://cgeur6xemalf3"]
 
 [ext_resource type="Texture2D" uid="uid://cfane1cxmvyik" path="res://Art & Assets/oak_woods_v1.0/background/background_layer_3.png" id="1_7a63t"]
 [ext_resource type="Script" path="res://scenes/level_1.gd" id="1_mquxw"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dryl7snpjbep7" path="res://Art & Assets/Extra Knights/lightred_Idle.png" id="16_sj7pv"]
 [ext_resource type="Texture2D" uid="uid://bvvja3sv8fmag" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/crate_1_damaged.png" id="19_ah853"]
 [ext_resource type="Texture2D" uid="uid://c5hlwk8lk02q5" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/langdebeve.png" id="20_1dbq8"]
+[ext_resource type="Texture2D" uid="uid://clg1ak6r8qtvs" path="res://Art & Assets/Extra Knights/dark_Idle.png" id="20_yc0r3"]
 [ext_resource type="Texture2D" uid="uid://doqm385o3hmp3" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/pole_axe.png" id="21_1cf7k"]
 
 [sub_resource type="Animation" id="Animation_a2ykg"]
@@ -238,6 +239,84 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 20.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67a3q"]
+atlas = ExtResource("20_yc0r3")
+region = Rect2(0, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pfwg"]
+atlas = ExtResource("20_yc0r3")
+region = Rect2(120, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m40p6"]
+atlas = ExtResource("20_yc0r3")
+region = Rect2(240, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1r3oe"]
+atlas = ExtResource("20_yc0r3")
+region = Rect2(360, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssklb"]
+atlas = ExtResource("20_yc0r3")
+region = Rect2(480, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcpy3"]
+atlas = ExtResource("20_yc0r3")
+region = Rect2(600, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5tsn"]
+atlas = ExtResource("20_yc0r3")
+region = Rect2(720, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m04tm"]
+atlas = ExtResource("20_yc0r3")
+region = Rect2(840, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38kws"]
+atlas = ExtResource("20_yc0r3")
+region = Rect2(960, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bes1"]
+atlas = ExtResource("20_yc0r3")
+region = Rect2(1080, 0, 120, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xdi72"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67a3q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pfwg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m40p6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1r3oe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssklb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jcpy3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5tsn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m04tm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38kws")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bes1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
 }]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ifso0"]
@@ -2742,10 +2821,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Trees Background" type="Node2D" parent="."]
 
 [node name="Dark Cave" type="TextureRect" parent="Trees Background"]
-offset_left = -450.0
-offset_top = 57.0
-offset_right = 1723.0
-offset_bottom = 537.0
+offset_left = -448.0
+offset_top = 66.0
+offset_right = 1725.0
+offset_bottom = 546.0
 texture = ExtResource("1_sa8pn")
 
 [node name="TextureRect" type="TextureRect" parent="Trees Background"]
@@ -2828,6 +2907,15 @@ offset_right = 495.0
 offset_bottom = 234.0
 theme_override_font_sizes/font_size = 12
 text = "E to Interact"
+
+[node name="Label6" type="Label" parent="Labels"]
+texture_filter = 1
+offset_left = 1532.0
+offset_top = 232.0
+offset_right = 1610.0
+offset_bottom = 250.0
+theme_override_font_sizes/font_size = 12
+text = "To Battlefield"
 
 [node name="Label3" type="Label" parent="Labels"]
 offset_left = 13.0
@@ -2955,36 +3043,8 @@ sprite_frames = SubResource("SpriteFrames_usfri")
 autoplay = "default"
 frame_progress = 0.944346
 
-[node name="idleknight11" type="AnimatedSprite2D" parent="Background Objects/Knights/bright"]
-position = Vector2(1202, 267)
-sprite_frames = SubResource("SpriteFrames_usfri")
-autoplay = "default"
-frame_progress = 0.944346
-flip_h = true
-
-[node name="idleknight12" type="AnimatedSprite2D" parent="Background Objects/Knights/bright"]
-position = Vector2(1245, 268)
-sprite_frames = SubResource("SpriteFrames_usfri")
-autoplay = "default"
-frame_progress = 0.944346
-flip_h = true
-
-[node name="idleknight13" type="AnimatedSprite2D" parent="Background Objects/Knights/bright"]
-position = Vector2(1269, 269)
-sprite_frames = SubResource("SpriteFrames_usfri")
-autoplay = "default"
-frame_progress = 0.944346
-flip_h = true
-
-[node name="idleknight14" type="AnimatedSprite2D" parent="Background Objects/Knights/bright"]
-position = Vector2(1292, 269)
-sprite_frames = SubResource("SpriteFrames_usfri")
-autoplay = "default"
-frame_progress = 0.944346
-flip_h = true
-
 [node name="idleknight15" type="AnimatedSprite2D" parent="Background Objects/Knights/bright"]
-position = Vector2(1314, 268)
+position = Vector2(1118, 263)
 sprite_frames = SubResource("SpriteFrames_usfri")
 autoplay = "default"
 frame_progress = 0.944346
@@ -3013,32 +3073,8 @@ autoplay = "default"
 frame_progress = 0.862423
 flip_h = true
 
-[node name="dimknight5" type="AnimatedSprite2D" parent="Background Objects/Knights/dim"]
-position = Vector2(1078, 265)
-sprite_frames = SubResource("SpriteFrames_8uvm5")
-autoplay = "default"
-frame_progress = 0.877317
-
 [node name="dimknight6" type="AnimatedSprite2D" parent="Background Objects/Knights/dim"]
 position = Vector2(1099, 265)
-sprite_frames = SubResource("SpriteFrames_8uvm5")
-autoplay = "default"
-frame_progress = 0.877317
-
-[node name="dimknight7" type="AnimatedSprite2D" parent="Background Objects/Knights/dim"]
-position = Vector2(1121, 266)
-sprite_frames = SubResource("SpriteFrames_8uvm5")
-autoplay = "default"
-frame_progress = 0.877317
-
-[node name="dimknight8" type="AnimatedSprite2D" parent="Background Objects/Knights/dim"]
-position = Vector2(1143, 267)
-sprite_frames = SubResource("SpriteFrames_8uvm5")
-autoplay = "default"
-frame_progress = 0.877317
-
-[node name="dimknight10" type="AnimatedSprite2D" parent="Background Objects/Knights/dim"]
-position = Vector2(1189, 267)
 sprite_frames = SubResource("SpriteFrames_8uvm5")
 autoplay = "default"
 frame_progress = 0.877317
@@ -3062,6 +3098,19 @@ position = Vector2(850, 264)
 sprite_frames = SubResource("SpriteFrames_8uvm5")
 autoplay = "default"
 frame_progress = 0.429072
+flip_h = true
+
+[node name="dark" type="Node2D" parent="Background Objects/Knights"]
+
+[node name="darkknight1" type="AnimatedSprite2D" parent="Background Objects/Knights/dark"]
+position = Vector2(1356, 266)
+sprite_frames = SubResource("SpriteFrames_xdi72")
+autoplay = "default"
+
+[node name="darkknight2" type="AnimatedSprite2D" parent="Background Objects/Knights/dark"]
+position = Vector2(1406, 266)
+sprite_frames = SubResource("SpriteFrames_xdi72")
+autoplay = "default"
 flip_h = true
 
 [node name="TileMap" type="TileMap" parent="."]
