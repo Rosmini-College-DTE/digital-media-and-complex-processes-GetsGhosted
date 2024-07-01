@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqn310ds07nla"]
+[gd_scene load_steps=9 format=3 uid="uid://cqn310ds07nla"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_3m6ok"]
 [ext_resource type="Texture2D" uid="uid://hog13pkpgpsm" path="res://Art & Assets/MoonGraveyard/Background_0.png" id="2_sxtbn"]
 [ext_resource type="Script" path="res://scenes/Background0.gd" id="3_ckw3n"]
 [ext_resource type="FontFile" uid="uid://b1c2n0pdq0xot" path="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/HV-Reg.otf" id="4_dy5ll"]
+[ext_resource type="AudioStream" uid="uid://nh88r0ikk5ih" path="res://Music/Wake up.mp3" id="5_r856n"]
 
 [sub_resource type="Animation" id="Animation_a2ykg"]
 resource_name = "fade_in"
@@ -167,6 +168,11 @@ theme_override_colors/font_hover_color = Color(0.736101, 0, 0.126668, 1)
 theme_override_fonts/font = ExtResource("4_dy5ll")
 theme_override_font_sizes/font_size = 24
 text = "Quit Game"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_r856n")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
