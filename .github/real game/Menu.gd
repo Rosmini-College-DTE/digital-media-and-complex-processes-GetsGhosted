@@ -15,7 +15,9 @@ func _on_transition_animation_finished(_anim_name):
 	get_tree().change_scene_to_packed(level1)
 
 func _on_options_pressed():
-	get_tree().change_scene_to_file("res://scenes/options_menu.tscn")
+	var options = load("res://scenes/options_menu.tscn").instantiate()
+	get_tree().current_scene.add_child(options)
+
 
 func _on_quit_game_pressed():
 	get_tree().quit()

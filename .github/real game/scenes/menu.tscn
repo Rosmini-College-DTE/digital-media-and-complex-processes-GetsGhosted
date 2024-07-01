@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cqn310ds07nla"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_3m6ok"]
-[ext_resource type="Texture2D" uid="uid://hog13pkpgpsm" path="res://Art & Assets/MoonGraveyard/Background_0.png" id="2_sxtbn"]
+[ext_resource type="Texture2D" uid="uid://c8wvn45x730nd" path="res://Art & Assets/MoonGraveyard/backtweaked.png" id="2_ds8fs"]
 [ext_resource type="Script" path="res://scenes/Background0.gd" id="3_ckw3n"]
 [ext_resource type="FontFile" uid="uid://b1c2n0pdq0xot" path="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/HV-Reg.otf" id="4_dy5ll"]
 [ext_resource type="AudioStream" uid="uid://nh88r0ikk5ih" path="res://Music/Wake up.mp3" id="5_r856n"]
@@ -102,7 +102,7 @@ metadata/_edit_use_anchors_ = true
 texture_filter = 1
 position = Vector2(-122, -108)
 scale = Vector2(1.83659, 2.05769)
-texture = ExtResource("2_sxtbn")
+texture = ExtResource("2_ds8fs")
 centered = false
 offset = Vector2(-24.215, -15.005)
 flip_h = true
