@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://y4fffm25mvb"]
+[gd_scene load_steps=9 format=3 uid="uid://y4fffm25mvb"]
 
 [ext_resource type="Script" path="res://scenes/options_menu.gd" id="1_4juau"]
 [ext_resource type="Texture2D" uid="uid://bek7pvtmgweuw" path="res://Art & Assets/PixelFantasy_Caves_1.0/background1.png" id="2_c2oot"]
 [ext_resource type="FontFile" uid="uid://b1c2n0pdq0xot" path="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/HV-Reg.otf" id="3_yptyr"]
+[ext_resource type="Texture2D" uid="uid://d08n5jox3sdlp" path="res://Art & Assets/PixelFantasy_Caves_1.0/background3.png" id="4_02o5o"]
+[ext_resource type="Script" path="res://scenes/Background0.gd" id="4_g0njm"]
 
 [sub_resource type="Animation" id="Animation_a2ykg"]
 resource_name = "fade_in"
@@ -73,6 +75,130 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4juau")
 
+[node name="cave" type="Node2D" parent="."]
+
+[node name="Background0" type="Sprite2D" parent="cave"]
+texture_filter = 1
+position = Vector2(-125.699, -111.589)
+scale = Vector2(1.68383, 1.81849)
+texture = ExtResource("2_c2oot")
+centered = false
+offset = Vector2(-24.215, -15.005)
+flip_h = true
+script = ExtResource("4_g0njm")
+
+[node name="foreground" type="Sprite2D" parent="cave"]
+texture_filter = 1
+position = Vector2(-125.699, -111.589)
+scale = Vector2(1.68383, 1.81849)
+texture = ExtResource("4_02o5o")
+centered = false
+offset = Vector2(-24.215, -15.005)
+flip_h = true
+script = ExtResource("4_g0njm")
+
+[node name="Labels" type="Node2D" parent="cave"]
+
+[node name="Controls" type="Label" parent="cave/Labels"]
+offset_left = 386.0
+offset_top = 22.0
+offset_right = 770.0
+offset_bottom = 94.0
+theme_override_fonts/font = ExtResource("3_yptyr")
+theme_override_font_sizes/font_size = 80
+text = "Controls
+"
+
+[node name="MarginContainer" type="MarginContainer" parent="cave/Labels"]
+offset_left = 196.0
+offset_top = 143.0
+offset_right = 407.0
+offset_bottom = 307.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="cave/Labels/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="attack" type="Label" parent="cave/Labels/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_yptyr")
+theme_override_font_sizes/font_size = 50
+text = "attack"
+
+[node name="interact" type="Label" parent="cave/Labels/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_yptyr")
+theme_override_font_sizes/font_size = 50
+text = "interact"
+
+[node name="jump" type="Label" parent="cave/Labels/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_yptyr")
+theme_override_font_sizes/font_size = 50
+text = "jump"
+
+[node name="move" type="Label" parent="cave/Labels/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_yptyr")
+theme_override_font_sizes/font_size = 50
+text = "movement"
+
+[node name="pause" type="Label" parent="cave/Labels/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_yptyr")
+theme_override_font_sizes/font_size = 50
+text = "pause
+"
+
+[node name="MarginContainer2" type="MarginContainer" parent="cave/Labels"]
+offset_left = 684.0
+offset_top = 143.0
+offset_right = 948.0
+offset_bottom = 488.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="cave/Labels/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="attack" type="Label" parent="cave/Labels/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_yptyr")
+theme_override_font_sizes/font_size = 50
+text = "left mouse"
+
+[node name="interact" type="Label" parent="cave/Labels/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_yptyr")
+theme_override_font_sizes/font_size = 50
+text = "e
+"
+
+[node name="jump" type="Label" parent="cave/Labels/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_yptyr")
+theme_override_font_sizes/font_size = 50
+text = "space"
+
+[node name="move" type="Label" parent="cave/Labels/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_yptyr")
+theme_override_font_sizes/font_size = 50
+text = "wasd"
+
+[node name="pause" type="Label" parent="cave/Labels/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_yptyr")
+theme_override_font_sizes/font_size = 50
+text = "esc"
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(574, 324)
 
@@ -95,15 +221,6 @@ offset_right = 1086.0
 offset_bottom = 667.0
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
-
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_c2oot")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
