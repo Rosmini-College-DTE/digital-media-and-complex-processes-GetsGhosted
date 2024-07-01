@@ -9,20 +9,20 @@
 [ext_resource type="Texture2D" uid="uid://f70cu34usy3h" path="res://Art & Assets/MoonGraveyard/Black Screen.PNG" id="4_n2esu"]
 [ext_resource type="FontFile" uid="uid://b1c2n0pdq0xot" path="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/HV-Reg.otf" id="5_3dgdj"]
 [ext_resource type="Texture2D" uid="uid://diinx4bwgx8lc" path="res://Art & Assets/oak_woods_v1.0/decorations/lamp.png" id="6_52lqj"]
+[ext_resource type="Texture2D" uid="uid://d8ach4n8cldx" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/bag_1.png" id="6_f87c0"]
 [ext_resource type="Texture2D" uid="uid://dy0ao24kre25m" path="res://Art & Assets/oak_woods_v1.0/decorations/rock_1.png" id="7_8dq7o"]
-[ext_resource type="Texture2D" uid="uid://di04t8ycju0ht" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/crate_3.png" id="8_8jcsd"]
+[ext_resource type="Texture2D" uid="uid://k8rix3q4gk8y" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/barrel.png" id="7_sffud"]
 [ext_resource type="Texture2D" uid="uid://bc4wk1nye0c11" path="res://Art & Assets/oak_woods_v1.0/decorations/sign.png" id="8_auj4a"]
+[ext_resource type="Texture2D" uid="uid://coy7looh66af" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/axe.png" id="8_qyedt"]
+[ext_resource type="Texture2D" uid="uid://bx535fn1ur4iw" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/crate_1.png" id="9_xx3sv"]
 [ext_resource type="Texture2D" uid="uid://bcuhtx6ajbdlg" path="res://Art & Assets/oak_woods_v1.0/decorations/fence_1.png" id="10_h68vv"]
 [ext_resource type="Texture2D" uid="uid://bfwie12ikyptu" path="res://Art & Assets/oak_woods_v1.0/decorations/rock_3.png" id="10_wi5f5"]
 [ext_resource type="Texture2D" uid="uid://c6h6qgvhgp5bk" path="res://Art & Assets/Extra Knights/dimred_Idle.png" id="11_bvamo"]
-[ext_resource type="Texture2D" uid="uid://d8ach4n8cldx" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/bag_1.png" id="12_i6dah"]
-[ext_resource type="Texture2D" uid="uid://k8rix3q4gk8y" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/barrel.png" id="14_chqmp"]
-[ext_resource type="Texture2D" uid="uid://coy7looh66af" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/axe.png" id="15_mpltg"]
+[ext_resource type="Texture2D" uid="uid://bvvja3sv8fmag" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/crate_1_damaged.png" id="15_7ovm5"]
+[ext_resource type="Texture2D" uid="uid://c5hlwk8lk02q5" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/langdebeve.png" id="16_g2fou"]
 [ext_resource type="Texture2D" uid="uid://dryl7snpjbep7" path="res://Art & Assets/Extra Knights/lightred_Idle.png" id="16_sj7pv"]
-[ext_resource type="Texture2D" uid="uid://bvvja3sv8fmag" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/crate_1_damaged.png" id="19_ah853"]
-[ext_resource type="Texture2D" uid="uid://c5hlwk8lk02q5" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/langdebeve.png" id="20_1dbq8"]
+[ext_resource type="Texture2D" uid="uid://doqm385o3hmp3" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/pole_axe.png" id="17_ikotg"]
 [ext_resource type="Texture2D" uid="uid://clg1ak6r8qtvs" path="res://Art & Assets/Extra Knights/dark_Idle.png" id="20_yc0r3"]
-[ext_resource type="Texture2D" uid="uid://doqm385o3hmp3" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/pole_axe.png" id="21_1cf7k"]
 
 [sub_resource type="Animation" id="Animation_a2ykg"]
 resource_name = "fade_in"
@@ -2821,10 +2821,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Trees Background" type="Node2D" parent="."]
 
 [node name="Dark Cave" type="TextureRect" parent="Trees Background"]
-offset_left = -448.0
-offset_top = 66.0
-offset_right = 1725.0
-offset_bottom = 546.0
+offset_left = -406.0
+offset_top = 70.0
+offset_right = 1767.0
+offset_bottom = 550.0
 texture = ExtResource("1_sa8pn")
 
 [node name="TextureRect" type="TextureRect" parent="Trees Background"]
@@ -2953,19 +2953,19 @@ text = "The Crusade"
 
 [node name="Bag1" type="Sprite2D" parent="Background Objects/Node2D"]
 position = Vector2(634, 292)
-texture = ExtResource("12_i6dah")
+texture = ExtResource("6_f87c0")
 
 [node name="Barrel" type="Sprite2D" parent="Background Objects/Node2D"]
 position = Vector2(682, 287)
-texture = ExtResource("14_chqmp")
+texture = ExtResource("7_sffud")
 
 [node name="Axe" type="Sprite2D" parent="Background Objects/Node2D"]
 position = Vector2(661, 291)
-texture = ExtResource("15_mpltg")
+texture = ExtResource("8_qyedt")
 
 [node name="Crate3" type="Sprite2D" parent="Background Objects/Node2D"]
 position = Vector2(737, 293)
-texture = ExtResource("8_8jcsd")
+texture = ExtResource("9_xx3sv")
 
 [node name="Lamp" type="Sprite2D" parent="Background Objects/Node2D"]
 position = Vector2(375, 278)
@@ -2994,30 +2994,30 @@ texture = ExtResource("10_wi5f5")
 
 [node name="Crate1Damaged" type="Sprite2D" parent="Background Objects/Node2D"]
 position = Vector2(948, 293)
-texture = ExtResource("19_ah853")
+texture = ExtResource("15_7ovm5")
 
 [node name="Langdebeve" type="Sprite2D" parent="Background Objects/Node2D"]
 position = Vector2(955, 279)
-texture = ExtResource("20_1dbq8")
+texture = ExtResource("16_g2fou")
 
 [node name="PoleAxe" type="Sprite2D" parent="Background Objects/Node2D"]
 position = Vector2(1378.5, 381.445)
-texture = ExtResource("21_1cf7k")
-offset = Vector2(0, -99.945)
-
-[node name="Crate1Damaged2" type="Sprite2D" parent="Background Objects/Node2D"]
-position = Vector2(1379.5, 394.445)
-texture = ExtResource("19_ah853")
+texture = ExtResource("17_ikotg")
 offset = Vector2(0, -99.945)
 
 [node name="Langdebeve2" type="Sprite2D" parent="Background Objects/Node2D"]
 position = Vector2(1386.5, 380.445)
-texture = ExtResource("20_1dbq8")
+texture = ExtResource("16_g2fou")
+offset = Vector2(0, -99.945)
+
+[node name="Crate1Damaged2" type="Sprite2D" parent="Background Objects/Node2D"]
+position = Vector2(1379.5, 394.445)
+texture = ExtResource("15_7ovm5")
 offset = Vector2(0, -99.945)
 
 [node name="PoleAxe2" type="Sprite2D" parent="Background Objects/Node2D"]
 position = Vector2(947, 280)
-texture = ExtResource("21_1cf7k")
+texture = ExtResource("17_ikotg")
 
 [node name="Knights" type="Node2D" parent="Background Objects"]
 
