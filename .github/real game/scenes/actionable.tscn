@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv1o8oqep3737"]
+
+[ext_resource type="Script" path="res://scenes/actionable.gd" id="1_2nkcc"]
+
+[node name="Actionable" type="Area2D"]
+collision_layer = 17
+script = ExtResource("1_2nkcc")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -41.0
+offset_top = -35.0
+offset_right = 44.0
+offset_bottom = -12.0
+text = "Interact (E)"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

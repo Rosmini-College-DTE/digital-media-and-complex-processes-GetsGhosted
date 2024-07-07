@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var double_jump_velocity : float = -175.0
 
 @onready var animated_sprite : AnimatedSprite2D = $AnimatedSprite2D
+@onready var actionable_finder: Area2D = $Direction/ActionableFinder
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -12,6 +13,13 @@ var has_double_jumped : bool = false
 var animation_locked : bool = false
 var direction : Vector2 = Vector2.ZERO
 var was_in_air : bool = false
+
+func _unhandled_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("interact"):
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].action()
+			return
 
 func _physics_process(delta):
 	# Add the gravity.
