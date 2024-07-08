@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=3 uid="uid://cgeur6xemalf3"]
+[gd_scene load_steps=93 format=3 uid="uid://cgeur6xemalf3"]
 
 [ext_resource type="Texture2D" uid="uid://cfane1cxmvyik" path="res://Art & Assets/oak_woods_v1.0/background/background_layer_3.png" id="1_7a63t"]
 [ext_resource type="Script" path="res://scenes/level_1.gd" id="1_mquxw"]
@@ -35,9 +35,10 @@
 [ext_resource type="Texture2D" uid="uid://br522obvujywg" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/bag_2.png" id="27_yqypj"]
 [ext_resource type="Texture2D" uid="uid://dd8at7lbhmu6t" path="res://Art & Assets/Blue Knight/dead1.png" id="32_raolv"]
 [ext_resource type="PackedScene" uid="uid://dv1o8oqep3737" path="res://scenes/actionable.tscn" id="36_t6oo5"]
-[ext_resource type="Resource" uid="uid://cfi108fjjt0ne" path="res://Dialogue/npc1.dialogue" id="37_b2l5e"]
-[ext_resource type="Resource" uid="uid://c78nye53pa4kc" path="res://Dialogue/npc2.dialogue" id="37_xtw2g"]
+[ext_resource type="Resource" uid="uid://cfi108fjjt0ne" path="res://Dialogue/npc1.dialogue" id="36_v14f5"]
+[ext_resource type="Resource" uid="uid://c78nye53pa4kc" path="res://Dialogue/npc2.dialogue" id="37_ol31l"]
 [ext_resource type="Texture2D" uid="uid://hxj4pi08al6h" path="res://Art & Assets/Extra Knights/vibrant_Idle.png" id="37_y3rmj"]
+[ext_resource type="Resource" uid="uid://dlqncgixfit2y" path="res://Dialogue/readscroll1.dialogue" id="38_kahvi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eqjtb"]
 size = Vector2(69, 22)
@@ -2884,9 +2885,11 @@ animations = [{
 "speed": 20.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0b8jm"]
-radius = 91.0
-height = 182.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_m78si"]
+radius = 62.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hd8xa"]
+radius = 64.1249
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_mquxw")
@@ -3265,10 +3268,6 @@ texture = ExtResource("26_comuv")
 position = Vector2(1860, 229)
 texture = ExtResource("27_yqypj")
 
-[node name="Scroll2" type="Sprite2D" parent="Bg Objects infront Tile map"]
-position = Vector2(210, 268)
-texture = ExtResource("26_f6p7d")
-
 [node name="FlagRed" type="Sprite2D" parent="Bg Objects infront Tile map"]
 position = Vector2(2073, 162)
 texture = ExtResource("27_5d3lc")
@@ -3295,11 +3294,11 @@ flip_h = true
 
 [node name="Actionable" parent="messenger" instance=ExtResource("36_t6oo5")]
 position = Vector2(3, 9)
-dialogue_resource = ExtResource("37_b2l5e")
+dialogue_resource = ExtResource("36_v14f5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="messenger/Actionable"]
 position = Vector2(2, 12)
-shape = SubResource("CapsuleShape2D_0b8jm")
+shape = SubResource("CircleShape2D_m78si")
 
 [node name="darkknight3" type="AnimatedSprite2D" parent="."]
 position = Vector2(1548, 265)
@@ -3309,12 +3308,25 @@ flip_h = true
 
 [node name="Actionable2" parent="darkknight3" instance=ExtResource("36_t6oo5")]
 position = Vector2(3, 9)
-dialogue_resource = ExtResource("37_xtw2g")
+dialogue_resource = ExtResource("37_ol31l")
 dialogue_start = "knight2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="darkknight3/Actionable2"]
 position = Vector2(2, 12)
-shape = SubResource("CapsuleShape2D_0b8jm")
+shape = SubResource("CircleShape2D_hd8xa")
+
+[node name="Scroll2" type="Sprite2D" parent="."]
+position = Vector2(1020, 300)
+texture = ExtResource("26_f6p7d")
+
+[node name="Actionable3" parent="Scroll2" instance=ExtResource("36_t6oo5")]
+position = Vector2(-2, -12)
+dialogue_resource = ExtResource("38_kahvi")
+dialogue_start = "scroll1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scroll2/Actionable3"]
+position = Vector2(2, 12)
+shape = SubResource("CircleShape2D_m78si")
 
 [node name="Player" parent="." instance=ExtResource("3_u8vwm")]
 position = Vector2(-23, 208)
