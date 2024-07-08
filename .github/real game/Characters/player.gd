@@ -28,10 +28,6 @@ func _physics_process(delta):
 		was_in_air = true
 	else:
 		has_double_jumped = false
-		
-#		if was_in_air == true:
-#			land()
-			
 		was_in_air = false 
 
 	# Handle jump.
@@ -83,10 +79,6 @@ func double_jump():
 	animated_sprite.play("jump_double")
 	animation_locked = true
 	has_double_jumped = true
-
-#func land():
-#	animated_sprite.play("jump_end")
-#	animation_locked = true
 	
 func _on_animated_sprite_2d_animation_finished():
 	if(["jump_end", "jump_start", "jump_double"].has(animated_sprite.animation)):
