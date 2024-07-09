@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://d2c87iliys6u3"
+path="res://.godot/imported/dyingnpc1.dialogue-0eee6bf4c08c4b061110814ff4436ae8.tres"
+
+[deps]
+
+source_file="res://Dialogue/dyingnpc1.dialogue"
+dest_files=["res://.godot/imported/dyingnpc1.dialogue-0eee6bf4c08c4b061110814ff4436ae8.tres"]
+
+[params]
+
+defaults=true

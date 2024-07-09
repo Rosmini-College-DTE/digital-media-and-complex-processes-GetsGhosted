@@ -1,11 +1,11 @@
 ~ start
 
-Messenger: Orders are final.
-Messenger: The Crusade will take place. The Kingdom is running out of food.
-Messenger: However we can't advance from our current position.
+Messenger (Nico): Orders are final.
+Messenger (Nico): The Crusade will take place. The Kingdom is running out of food.
+Messenger (Nico): However we can't advance from our current position.
 - What's the issue?
-Messenger: There's a blockade in the tunnel entrance. We need someone to clear it out.
+Messenger (Nico): There's a blockade in the tunnel entrance. We need someone to clear it out.
 - I'll handle it.
-Messenger: Great, just go forward of the Knights up ahead.
+Messenger (Nico): Great, just go forward of the Knights up ahead.
 
 => END

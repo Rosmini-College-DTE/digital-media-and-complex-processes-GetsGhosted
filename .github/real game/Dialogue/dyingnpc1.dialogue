@@ -1,0 +1,21 @@
+~ dying1
+
+*Approaches Injured Solder* 
+Knight (Gian): Hey, was I a good Knight?
+Knight (Gian): Everyone told me it was pointless to fight. The undead is infinite.
+Knight (Gian): Go. Your the last one standing. There's something different about you.
+Knight (Gian): Avenge your fallen soldiers. Save your people.
+- You can rest now.
+- Sayless
+- Aight bet
+#Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
+#Nathan: Here are some choices.
+#- First one
+#	Nathan: You picked the first one.
+#- Second one
+#	Nathan: You picked the second one.
+#- Start again => dying1
+#- End the conversation => END
+#Nathan: For more information see the online documentation.
+
+=> END
