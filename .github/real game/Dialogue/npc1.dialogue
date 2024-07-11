@@ -1,11 +1,24 @@
 ~ start
 
-Messenger (Nico): Orders are final.
-Messenger (Nico): The Crusade will take place. The Kingdom is running out of food.
-Messenger (Nico): However we can't advance from our current position.
-- What's the issue?
-Messenger (Nico): There's a blockade in the tunnel entrance. We need someone to clear it out.
-- I'll handle it.
-Messenger (Nico): Great, just go forward of the Knights up ahead.
+#Messenger (Nico): Orders are final.
+#Messenger (Nico): The Crusade will take place. The Kingdom is running out of food.
+#Messenger (Nico): However we can't advance from our current position.
+#- What's the issue?
+#Messenger (Nico): There's a blockade in the tunnel entrance. We need someone to clear it out.
+#- I'll handle it.
+#Messenger (Nico): Great, just go forward of the Knights up ahead.
+
+Messenger (Nico): I take it your a volunteer?
+- Yessirrr
+Messenger (Nico): I'm sure you know the mission.
+Messenger (Nico): The De Paul House is running low on supplies. It's up to us to deliver to them.
+Messenger (Nico): However a dangerous journey lies ahead for those who wish to carry the supplies.
+Messenger (Nico): The monsters and terrain are designed to kill travellers that attempt to cross.
+Messenger (Nico): Are you ready?
+- Yes
+	Messenger (Nico): Great, just move along ahead, you'll find some other volunteers.
+- No
+	Messenger (Nico): You came here first, you have no choice. Now move along.
+	Messenger (Nico): You'll meet some other volunteers along the way.
 
 => END
