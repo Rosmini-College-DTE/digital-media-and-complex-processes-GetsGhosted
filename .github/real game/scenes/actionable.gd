@@ -4,6 +4,8 @@ extends Area2D
 @export var dialogue_resource: DialogueResource
 @export var dialogue_start: String = "start"
 
+func _ready():
+	$Label.visible = false
 
 
 func action() -> void:

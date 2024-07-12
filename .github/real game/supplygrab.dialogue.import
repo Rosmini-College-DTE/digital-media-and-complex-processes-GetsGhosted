@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://tflvcqmyec7h"
+path="res://.godot/imported/supplygrab.dialogue-0ff4034844a269f80f216550f10718ac.tres"
+
+[deps]
+
+source_file="res://supplygrab.dialogue"
+dest_files=["res://.godot/imported/supplygrab.dialogue-0ff4034844a269f80f216550f10718ac.tres"]
+
+[params]
+
+defaults=true
