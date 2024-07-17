@@ -1,4 +1,4 @@
-[gd_scene load_steps=93 format=3 uid="uid://cgeur6xemalf3"]
+[gd_scene load_steps=94 format=3 uid="uid://cgeur6xemalf3"]
 
 [ext_resource type="Texture2D" uid="uid://cfane1cxmvyik" path="res://Art & Assets/oak_woods_v1.0/background/background_layer_3.png" id="1_7a63t"]
 [ext_resource type="Script" path="res://scenes/level_1.gd" id="1_mquxw"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://hxj4pi08al6h" path="res://Art & Assets/Extra Knights/vibrant_Idle.png" id="37_y3rmj"]
 [ext_resource type="Resource" uid="uid://dlqncgixfit2y" path="res://Dialogue/readscroll1.dialogue" id="38_kahvi"]
 [ext_resource type="Resource" uid="uid://b3fks7xtwg0jb" path="res://Dialogue/supplygrab.dialogue" id="39_t6tdv"]
+[ext_resource type="PackedScene" uid="uid://un7j1ewh8f4n" path="res://Characters/enemy_1.tscn" id="40_hkfao"]
 [ext_resource type="Texture2D" uid="uid://br522obvujywg" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/bag_2.png" id="40_mv7pg"]
 [ext_resource type="Texture2D" uid="uid://d8ach4n8cldx" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/bag_1.png" id="41_g1550"]
 
@@ -3373,3 +3374,6 @@ drag_vertical_enabled = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../Camera2D")
+
+[node name="Enemy1" parent="." instance=ExtResource("40_hkfao")]
+position = Vector2(2710, 240)
