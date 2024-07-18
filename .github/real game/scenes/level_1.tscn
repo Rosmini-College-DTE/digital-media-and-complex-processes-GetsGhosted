@@ -3376,4 +3376,10 @@ drag_vertical_enabled = true
 remote_path = NodePath("../Camera2D")
 
 [node name="Enemy1" parent="." instance=ExtResource("40_hkfao")]
-position = Vector2(2710, 240)
+position = Vector2(2638, 236)
+
+[node name="Enemy2" parent="." instance=ExtResource("40_hkfao")]
+position = Vector2(2739, 236)
+
+[node name="Enemy3" parent="." instance=ExtResource("40_hkfao")]
+position = Vector2(2841, 236)

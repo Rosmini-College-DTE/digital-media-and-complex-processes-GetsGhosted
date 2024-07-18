@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://un7j1ewh8f4n"]
+[gd_scene load_steps=72 format=3 uid="uid://un7j1ewh8f4n"]
 
 [ext_resource type="Texture2D" uid="uid://ccrw8k3awrpnr" path="res://Art & Assets/Skeleton/Sprite Sheets/Skeleton Attack.png" id="1_fgqe4"]
 [ext_resource type="Script" path="res://Characters/enemy_1.gd" id="1_w6f0e"]
@@ -6,13 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bdqeuw535xlhk" path="res://Art & Assets/Skeleton/Sprite Sheets/Skeleton Idle.png" id="3_fvwk1"]
 [ext_resource type="Texture2D" uid="uid://bjbj60om1xksx" path="res://Art & Assets/Skeleton/Sprite Sheets/Skeleton Walk.png" id="4_viyd6"]
 [ext_resource type="Texture2D" uid="uid://dqvdyxyxlmi13" path="res://Art & Assets/Skeleton/Sprite Sheets/Skeleton React.png" id="5_mt4r0"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_hg1gi"]
-radius = 91.022
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d33yn"]
-radius = 13.0
-height = 50.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mwu3x"]
 atlas = ExtResource("1_fgqe4")
@@ -315,7 +308,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ijon3")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack",
 "speed": 20.0
 }, {
@@ -469,8 +462,29 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_hg1gi"]
+radius = 91.022
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d33yn"]
+radius = 13.0
+height = 50.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m3iox"]
+radius = 44.0114
+
 [node name="Enemy1" type="CharacterBody2D"]
 script = ExtResource("1_w6f0e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, -1)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_sb2eq")
+animation = &"attack"
+autoplay = "idle"
+frame = 17
+frame_progress = 1.0
+offset = Vector2(5.7, -2.045)
+flip_h = true
 
 [node name="DetectionArea" type="Area2D" parent="."]
 collision_layer = 2
@@ -483,15 +497,17 @@ shape = SubResource("CircleShape2D_hg1gi")
 position = Vector2(0, -4)
 shape = SubResource("CapsuleShape2D_d33yn")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-2, -1)
-scale = Vector2(1.5, 1.5)
-sprite_frames = SubResource("SpriteFrames_sb2eq")
-animation = &"react"
-autoplay = "idle"
-frame = 2
-frame_progress = 0.00803098
-offset = Vector2(5.7, -2.045)
+[node name="SkeletonHitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SkeletonHitbox"]
+position = Vector2(1, -1)
+shape = SubResource("CircleShape2D_m3iox")
+
+[node name="TakeDamageCooldown" type="Timer" parent="."]
+wait_time = 0.5
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="SkeletonHitbox" to="." method="_on_skeleton_hitbox_body_entered"]
+[connection signal="body_exited" from="SkeletonHitbox" to="." method="_on_skeleton_hitbox_body_exited"]
+[connection signal="timeout" from="TakeDamageCooldown" to="." method="_on_take_damage_cooldown_timeout"]
