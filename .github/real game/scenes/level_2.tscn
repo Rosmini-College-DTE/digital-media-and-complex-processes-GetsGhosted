@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b8pvrc0df6evm"]
+[gd_scene load_steps=14 format=3 uid="uid://b8pvrc0df6evm"]
 
 [ext_resource type="Texture2D" uid="uid://bo2p6mr4eju11" path="res://Art & Assets/PixelFantasy_Caves_1.0/bg1contr.png" id="1_c6n7o"]
 [ext_resource type="PackedScene" uid="uid://6qm3grhx0gx2" path="res://Characters/player.tscn" id="1_ebfd7"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dosk211da5mum" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/door.png" id="7_s810u"]
 [ext_resource type="Texture2D" uid="uid://d8ach4n8cldx" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/bag_1.png" id="8_m0ypn"]
 [ext_resource type="Texture2D" uid="uid://dd8at7lbhmu6t" path="res://Art & Assets/Blue Knight/dead1.png" id="9_k0dwe"]
+[ext_resource type="PackedScene" uid="uid://un7j1ewh8f4n" path="res://Characters/enemy_1.tscn" id="10_ejqyt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_udap1"]
 texture = ExtResource("1_xv41j")
@@ -4054,3 +4055,80 @@ drag_vertical_enabled = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../Camera2D")
+
+[node name="LevelEnemies" type="Node2D" parent="."]
+
+[node name="SkeletonGroup1" type="Node2D" parent="LevelEnemies"]
+
+[node name="Enemy1" parent="LevelEnemies/SkeletonGroup1" instance=ExtResource("10_ejqyt")]
+position = Vector2(886, 328)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Enemy2" parent="LevelEnemies/SkeletonGroup1" instance=ExtResource("10_ejqyt")]
+position = Vector2(1070, 328)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Enemy3" parent="LevelEnemies/SkeletonGroup1" instance=ExtResource("10_ejqyt")]
+position = Vector2(985, 329)
+collision_layer = 5
+collision_mask = 5
+
+[node name="EnemyOnlyCollision" type="StaticBody2D" parent="LevelEnemies"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LevelEnemies/EnemyOnlyCollision"]
+polygon = PackedVector2Array(796, 223, 792, 354, 792, 375, 889, 377, 1035, 379, 1164, 375, 1162, 300, 1161, 243, 1162, 206, 1085, 207, 958, 207, 875, 209, 797, 212, 828, 182, 955, 175, 1124, 175, 1191, 188, 1190, 256, 1194, 388, 1185, 424, 1059, 414, 901, 412, 784, 409, 751, 338, 761, 231, 794, 211)
+
+[node name="SkeletonGroup2" type="Node2D" parent="LevelEnemies"]
+
+[node name="Enemy4" parent="LevelEnemies/SkeletonGroup2" instance=ExtResource("10_ejqyt")]
+position = Vector2(1386, 329)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Enemy5" parent="LevelEnemies/SkeletonGroup2" instance=ExtResource("10_ejqyt")]
+position = Vector2(1470, 329)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Enemy6" parent="LevelEnemies/SkeletonGroup2" instance=ExtResource("10_ejqyt")]
+position = Vector2(1561, 329)
+collision_layer = 5
+collision_mask = 5
+
+[node name="EnemyOnlyCollision2" type="StaticBody2D" parent="LevelEnemies"]
+position = Vector2(495, 4)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LevelEnemies/EnemyOnlyCollision2"]
+polygon = PackedVector2Array(796, 223, 792, 354, 792, 375, 889, 377, 1035, 379, 1164, 375, 1162, 300, 1161, 243, 1162, 206, 1085, 207, 958, 207, 875, 209, 797, 212, 828, 182, 955, 175, 1124, 175, 1191, 188, 1190, 256, 1194, 388, 1185, 424, 1059, 414, 901, 412, 784, 409, 751, 338, 761, 231, 794, 211)
+
+[node name="SkeletonGroup3" type="Node2D" parent="LevelEnemies"]
+
+[node name="Enemy7" parent="LevelEnemies/SkeletonGroup3" instance=ExtResource("10_ejqyt")]
+position = Vector2(2066, 329)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Enemy8" parent="LevelEnemies/SkeletonGroup3" instance=ExtResource("10_ejqyt")]
+position = Vector2(2167, 329)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Enemy9" parent="LevelEnemies/SkeletonGroup3" instance=ExtResource("10_ejqyt")]
+position = Vector2(2263, 328)
+collision_layer = 5
+collision_mask = 5
+
+[node name="EnemyOnlyCollision3" type="StaticBody2D" parent="LevelEnemies"]
+position = Vector2(1207, 8)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LevelEnemies/EnemyOnlyCollision3"]
+position = Vector2(-12, -16)
+polygon = PackedVector2Array(796, 223, 792, 354, 792, 375, 889, 377, 1035, 379, 1164, 375, 1162, 300, 1161, 243, 1162, 206, 1085, 207, 958, 207, 875, 209, 797, 212, 828, 182, 955, 175, 1124, 175, 1191, 188, 1190, 256, 1194, 388, 1185, 424, 1059, 414, 901, 412, 784, 409, 751, 338, 761, 231, 794, 211)

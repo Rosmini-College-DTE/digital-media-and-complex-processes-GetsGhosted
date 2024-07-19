@@ -244,7 +244,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack1",
-"speed": 10.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -458,8 +458,10 @@ script = ExtResource("1_n14di")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-55, -60)
 sprite_frames = SubResource("SpriteFrames_xbl18")
-animation = &"idle"
+animation = &"attack1"
 autoplay = "idle"
+frame = 3
+frame_progress = 1.0
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
