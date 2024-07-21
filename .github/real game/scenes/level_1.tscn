@@ -36,7 +36,7 @@
 [ext_resource type="Resource" uid="uid://c78nye53pa4kc" path="res://Dialogue/npc2.dialogue" id="37_ol31l"]
 [ext_resource type="Texture2D" uid="uid://hxj4pi08al6h" path="res://Art & Assets/Extra Knights/vibrant_Idle.png" id="37_y3rmj"]
 [ext_resource type="Resource" uid="uid://dlqncgixfit2y" path="res://Dialogue/readscroll1.dialogue" id="38_kahvi"]
-[ext_resource type="Resource" uid="uid://b3fks7xtwg0jb" path="res://Dialogue/supplygrab.dialogue" id="39_t6tdv"]
+[ext_resource type="Resource" uid="uid://cwu5ric2rti34" path="res://Dialogue/supplygrab.dialogue" id="39_t6tdv"]
 [ext_resource type="PackedScene" uid="uid://un7j1ewh8f4n" path="res://Characters/enemy_1.tscn" id="40_hkfao"]
 [ext_resource type="Texture2D" uid="uid://br522obvujywg" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/bag_2.png" id="40_mv7pg"]
 [ext_resource type="Texture2D" uid="uid://d8ach4n8cldx" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/bag_1.png" id="41_g1550"]
