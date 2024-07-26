@@ -8,7 +8,7 @@ var player_alive = true
 var attack_ip = false
 
 @export var speed : float = 200.0
-@export var jump_velocity : float = -200.0
+@export var jump_velocity : float = -250.0
 @export var double_jump_velocity : float = -175.0
 
 @onready var animated_sprite : AnimatedSprite2D = $AnimatedSprite2D
@@ -22,6 +22,9 @@ var direction : Vector2 = Vector2.ZERO
 var was_in_air : bool = false
 var current_dir = "none"
 
+func _ready():
+	Globals.playerAlive = player_alive
+	
 func _unhandled_input(_event: InputEvent) -> void:  #interact function
 	if Input.is_action_just_pressed("interact"):
 		var actionables = actionable_finder.get_overlapping_areas()
