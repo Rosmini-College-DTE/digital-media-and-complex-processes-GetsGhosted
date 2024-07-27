@@ -116,6 +116,18 @@ offset_right = 353.0
 offset_bottom = 730.0
 flip_h = true
 
+[node name="Title2" type="Label" parent="."]
+layout_mode = 2
+offset_left = 796.0
+offset_top = 581.0
+offset_right = 1204.0
+offset_bottom = 644.0
+theme_override_fonts/font = ExtResource("4_dy5ll")
+theme_override_font_sizes/font_size = 32
+text = "Music by
+jonas liwanag"
+horizontal_alignment = 1
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
 offset_left = 31.0
@@ -168,6 +180,14 @@ theme_override_colors/font_hover_color = Color(0.736101, 0, 0.126668, 1)
 theme_override_fonts/font = ExtResource("4_dy5ll")
 theme_override_font_sizes/font_size = 24
 text = "Quit Game"
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_dy5ll")
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_dy5ll")
 
 [node name="Wake Up" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_r856n")

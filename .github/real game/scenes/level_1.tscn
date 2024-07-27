@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=3 uid="uid://cgeur6xemalf3"]
+[gd_scene load_steps=98 format=3 uid="uid://cgeur6xemalf3"]
 
 [ext_resource type="Texture2D" uid="uid://cfane1cxmvyik" path="res://Art & Assets/oak_woods_v1.0/background/background_layer_3.png" id="1_7a63t"]
 [ext_resource type="Script" path="res://scenes/level_1.gd" id="1_mquxw"]
@@ -41,6 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://br522obvujywg" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/bag_2.png" id="40_mv7pg"]
 [ext_resource type="Texture2D" uid="uid://d8ach4n8cldx" path="res://Art & Assets/Medieval_Castle_Asset_Pack/Decorations/bag_1.png" id="41_g1550"]
 [ext_resource type="Script" path="res://Scripts/deathzone.gd" id="41_sooyy"]
+[ext_resource type="AudioStream" uid="uid://5hl1uypm2ll" path="res://Music/HRS.mp3" id="42_t2p1j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eqjtb"]
 size = Vector2(69, 22)
@@ -3292,10 +3293,12 @@ position = Vector2(1860, 229)
 texture = ExtResource("40_mv7pg")
 
 [node name="FlagRed" type="Sprite2D" parent="Bg Objects infront Tile map"]
+visible = false
 position = Vector2(2073, 162)
 texture = ExtResource("27_5d3lc")
 
 [node name="FlagRed2" type="Sprite2D" parent="Bg Objects infront Tile map"]
+visible = false
 position = Vector2(2445, 166)
 texture = ExtResource("27_5d3lc")
 
@@ -3414,5 +3417,10 @@ script = ExtResource("41_sooyy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone_Void/Area2D"]
 position = Vector2(-35.5, -16.5)
 shape = SubResource("RectangleShape2D_ytxt1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("42_t2p1j")
+volume_db = -12.741
+autoplay = true
 
 [connection signal="area_entered" from="DeathZone_Void/Area2D" to="DeathZone_Void/Area2D" method="_on_area_entered"]

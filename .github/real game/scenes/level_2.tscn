@@ -4074,17 +4074,22 @@ remote_path = NodePath("../Camera2D")
 [node name="SkeletonGroup1" type="Node2D" parent="LevelEnemies"]
 
 [node name="Enemy1" parent="LevelEnemies/SkeletonGroup1" instance=ExtResource("10_ejqyt")]
-position = Vector2(886, 328)
+position = Vector2(879, 329)
 collision_layer = 5
 collision_mask = 5
 
 [node name="Enemy2" parent="LevelEnemies/SkeletonGroup1" instance=ExtResource("10_ejqyt")]
-position = Vector2(1070, 328)
+position = Vector2(964, 328)
 collision_layer = 5
 collision_mask = 5
 
 [node name="Enemy3" parent="LevelEnemies/SkeletonGroup1" instance=ExtResource("10_ejqyt")]
-position = Vector2(985, 329)
+position = Vector2(1024, 328)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Enemy11" parent="LevelEnemies/SkeletonGroup1" instance=ExtResource("10_ejqyt")]
+position = Vector2(1480, 327)
 collision_layer = 5
 collision_mask = 5
 
@@ -4098,17 +4103,27 @@ polygon = PackedVector2Array(796, 223, 792, 354, 792, 375, 889, 377, 1035, 379, 
 [node name="SkeletonGroup2" type="Node2D" parent="LevelEnemies"]
 
 [node name="Enemy4" parent="LevelEnemies/SkeletonGroup2" instance=ExtResource("10_ejqyt")]
-position = Vector2(1386, 329)
+position = Vector2(1346, 328)
 collision_layer = 5
 collision_mask = 5
 
 [node name="Enemy5" parent="LevelEnemies/SkeletonGroup2" instance=ExtResource("10_ejqyt")]
-position = Vector2(1470, 329)
+position = Vector2(1400, 329)
 collision_layer = 5
 collision_mask = 5
 
 [node name="Enemy6" parent="LevelEnemies/SkeletonGroup2" instance=ExtResource("10_ejqyt")]
-position = Vector2(1561, 329)
+position = Vector2(1547, 328)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Enemy12" parent="LevelEnemies/SkeletonGroup2" instance=ExtResource("10_ejqyt")]
+position = Vector2(1073, 329)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Enemy13" parent="LevelEnemies/SkeletonGroup2" instance=ExtResource("10_ejqyt")]
+position = Vector2(2266, 328)
 collision_layer = 5
 collision_mask = 5
 
@@ -4123,17 +4138,17 @@ polygon = PackedVector2Array(796, 223, 792, 354, 792, 375, 889, 377, 1035, 379, 
 [node name="SkeletonGroup3" type="Node2D" parent="LevelEnemies"]
 
 [node name="Enemy7" parent="LevelEnemies/SkeletonGroup3" instance=ExtResource("10_ejqyt")]
-position = Vector2(2066, 329)
+position = Vector2(2048, 330)
 collision_layer = 5
 collision_mask = 5
 
 [node name="Enemy8" parent="LevelEnemies/SkeletonGroup3" instance=ExtResource("10_ejqyt")]
-position = Vector2(2167, 329)
+position = Vector2(2133, 328)
 collision_layer = 5
 collision_mask = 5
 
 [node name="Enemy9" parent="LevelEnemies/SkeletonGroup3" instance=ExtResource("10_ejqyt")]
-position = Vector2(2263, 328)
+position = Vector2(2201, 327)
 collision_layer = 5
 collision_mask = 5
 
@@ -4150,3 +4165,24 @@ collision_mask = 4
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LevelEnemies/EnemyOnlyCollision3"]
 position = Vector2(-12, -16)
 polygon = PackedVector2Array(796, 223, 792, 354, 792, 375, 889, 377, 1035, 379, 1164, 375, 1162, 300, 1161, 243, 1162, 206, 1085, 207, 958, 207, 875, 209, 797, 212, 828, 182, 955, 175, 1124, 175, 1191, 188, 1190, 256, 1194, 388, 1185, 424, 1059, 414, 901, 412, 784, 409, 751, 338, 761, 231, 794, 211)
+
+[node name="EnemyOnlyCollision4" type="StaticBody2D" parent="LevelEnemies"]
+position = Vector2(2937, 16)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LevelEnemies/EnemyOnlyCollision4"]
+position = Vector2(-12, -16)
+polygon = PackedVector2Array(796, 223, 792, 354, 792, 375, 889, 377, 1035, 379, 1164, 375, 1162, 300, 1161, 243, 1162, 206, 1085, 207, 958, 207, 875, 209, 797, 212, 828, 182, 955, 175, 1124, 175, 1191, 188, 1190, 256, 1194, 388, 1185, 424, 1059, 414, 901, 412, 784, 409, 751, 338, 761, 231, 794, 211)
+
+[node name="SkeletonGroup4" type="Node" parent="LevelEnemies"]
+
+[node name="Enemy14" parent="LevelEnemies/SkeletonGroup4" instance=ExtResource("10_ejqyt")]
+position = Vector2(3810, 328)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Enemy15" parent="LevelEnemies/SkeletonGroup4" instance=ExtResource("10_ejqyt")]
+position = Vector2(4001, 328)
+collision_layer = 5
+collision_mask = 5

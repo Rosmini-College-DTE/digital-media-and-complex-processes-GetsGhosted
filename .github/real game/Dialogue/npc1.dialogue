@@ -8,11 +8,12 @@
 #- I'll handle it.
 #Messenger (Nico): Great, just go forward of the Knights up ahead.
 
-Messenger (Nico): I take it your a volunteer?
+Messenger (Nico): You must be a Knight?
 - Yessirrr
+- What else would I be??
 #Messenger (Nico): I'm sure you know the mission.
-Messenger (Nico): The De Paul House is running low on supplies. It's up to us to deliver to them.
-Messenger (Nico): However a dangerous journey lies ahead for those who wish to carry the supplies.
+Messenger (Nico): A neighboring Kingdom across the mountains has recently faced a famine. They called to us for help.
+Messenger (Nico): Most of our soldiers aren't willing to take the journey, its classified and dangerous.
 Messenger (Nico): The monsters and terrain are designed to kill travellers that attempt to cross.
 Messenger (Nico): Are you ready?
 - Yes
