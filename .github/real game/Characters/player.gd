@@ -21,9 +21,11 @@ var animation_locked : bool = false
 var direction : Vector2 = Vector2.ZERO
 var was_in_air : bool = false
 var current_dir = "none"
+var is_dying : bool = false
 
 func _ready():
 	Globals.playerAlive = player_alive
+	#$AnimatedSprite2D.connect("animation_finished", self, "_on_animation_finished")
 	
 func _unhandled_input(_event: InputEvent) -> void:  #interact function
 	if Input.is_action_just_pressed("interact"):
@@ -48,6 +50,7 @@ func _physics_process(delta):
 	if health <= 0:
 		player_alive = false #add death menu in future. use get tree function or something
 		health = 0
+		is_dying = true
 		print("You Died") 
 		$AnimatedSprite2D.play("death")
 		get_tree().change_scene_to_file("res://scenes/deathmenu.tscn")
@@ -75,6 +78,9 @@ func _physics_process(delta):
 	update_facing_direction()
 	#player_movement(delta)
 
+func _on_animation_finished(anim_name):
+	if anim_name == "death" and is_dying:
+		get_tree().change_scene_to_file("res://scenes/deathmenu.tscn")
 
 func player_movement(delta):
 	

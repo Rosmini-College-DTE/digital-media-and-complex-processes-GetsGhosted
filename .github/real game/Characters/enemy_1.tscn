@@ -479,10 +479,8 @@ script = ExtResource("1_w6f0e")
 position = Vector2(-2, -1)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_sb2eq")
-animation = &"attack"
+animation = &"death"
 autoplay = "idle"
-frame = 17
-frame_progress = 1.0
 offset = Vector2(5.7, -2.045)
 
 [node name="DetectionArea" type="Area2D" parent="."]
