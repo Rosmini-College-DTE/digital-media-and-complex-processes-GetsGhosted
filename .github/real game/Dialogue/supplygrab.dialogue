@@ -3,6 +3,6 @@
 Campaign: These are the supplies. From here theres no turning back.
 - Open Door
 	do wait(2)
-	do onSwitchScene()
+	do Globals.onSwitchScene()
 
 => END

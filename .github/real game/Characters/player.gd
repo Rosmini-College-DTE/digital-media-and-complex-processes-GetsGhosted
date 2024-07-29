@@ -49,8 +49,9 @@ func _physics_process(delta):
 		player_alive = false #add death menu in future. use get tree function or something
 		health = 0
 		print("You Died") 
-		#$AnimatedSprite2D.play("death")
-		self.queue_free()
+		$AnimatedSprite2D.play("death")
+		get_tree().change_scene_to_file("res://scenes/deathmenu.tscn")
+
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump"):

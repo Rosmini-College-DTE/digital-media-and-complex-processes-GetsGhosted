@@ -2901,7 +2901,7 @@ radius = 64.1249
 size = Vector2(64, 172)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ytxt1"]
-size = Vector2(917, 51)
+size = Vector2(1328, 51)
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_mquxw")
@@ -3399,6 +3399,9 @@ position = Vector2(2739, 236)
 [node name="Enemy3" parent="Level NPCS_Characters/EnemyGroup" instance=ExtResource("40_hkfao")]
 position = Vector2(2841, 236)
 
+[node name="Enemy4" parent="Level NPCS_Characters/EnemyGroup" instance=ExtResource("40_hkfao")]
+position = Vector2(2923, 234)
+
 [node name="barrier2" type="Node" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="barrier2"]
@@ -3415,10 +3418,10 @@ position = Vector2(2126, 680)
 script = ExtResource("41_sooyy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone_Void/Area2D"]
-position = Vector2(-35.5, -16.5)
+position = Vector2(-147, 92)
 shape = SubResource("RectangleShape2D_ytxt1")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Have Your Resolution" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("42_t2p1j")
 volume_db = -12.741
 autoplay = true
