@@ -3029,6 +3029,7 @@ text = "The Crusade"
 [node name="Collision Objects" type="Node2D" parent="map"]
 
 [node name="Crate3" type="Sprite2D" parent="map/Collision Objects"]
+visible = false
 position = Vector2(1239, 293)
 texture = ExtResource("24_h0bve")
 
@@ -3064,30 +3065,44 @@ metadata/_edit_use_anchors_ = true
 [node name="Node2D" type="Node2D" parent="Background Objects"]
 
 [node name="Sword2" type="Sprite2D" parent="Background Objects/Node2D"]
+visible = false
 position = Vector2(1654, 238)
 texture = ExtResource("6_8rugp")
 
 [node name="Bag1" type="Sprite2D" parent="Background Objects/Node2D"]
-position = Vector2(634, 292)
+position = Vector2(372, 298)
+texture = ExtResource("41_g1550")
+
+[node name="Bag3" type="Sprite2D" parent="Background Objects/Node2D"]
+position = Vector2(382, 299)
+texture = ExtResource("41_g1550")
+
+[node name="Bag2" type="Sprite2D" parent="Background Objects/Node2D"]
+position = Vector2(355, 300)
 texture = ExtResource("41_g1550")
 
 [node name="Barrel" type="Sprite2D" parent="Background Objects/Node2D"]
+visible = false
 position = Vector2(682, 287)
 texture = ExtResource("7_sffud")
 
 [node name="Axe" type="Sprite2D" parent="Background Objects/Node2D"]
+visible = false
 position = Vector2(661, 291)
 texture = ExtResource("8_qyedt")
 
 [node name="Crate3" type="Sprite2D" parent="Background Objects/Node2D"]
+visible = false
 position = Vector2(737, 293)
 texture = ExtResource("9_xx3sv")
 
 [node name="Lamp" type="Sprite2D" parent="Background Objects/Node2D"]
+visible = false
 position = Vector2(375, 278)
 texture = ExtResource("6_52lqj")
 
 [node name="Rock1" type="Sprite2D" parent="Background Objects/Node2D"]
+visible = false
 position = Vector2(-46, 299)
 texture = ExtResource("7_8dq7o")
 
@@ -3096,14 +3111,17 @@ position = Vector2(323, 290)
 texture = ExtResource("8_auj4a")
 
 [node name="Fence3" type="Sprite2D" parent="Background Objects/Node2D"]
+visible = false
 position = Vector2(-248, 110)
 texture = ExtResource("10_h68vv")
 
 [node name="Fence4" type="Sprite2D" parent="Background Objects/Node2D"]
+visible = false
 position = Vector2(-167, 110)
 texture = ExtResource("10_h68vv")
 
 [node name="Rock3" type="Sprite2D" parent="Background Objects/Node2D"]
+visible = false
 position = Vector2(445, 278)
 scale = Vector2(1.92222, 2.83333)
 texture = ExtResource("10_wi5f5")
@@ -3113,6 +3131,7 @@ position = Vector2(948, 293)
 texture = ExtResource("15_7ovm5")
 
 [node name="Langdebeve" type="Sprite2D" parent="Background Objects/Node2D"]
+visible = false
 position = Vector2(955, 279)
 texture = ExtResource("16_g2fou")
 
@@ -3129,11 +3148,13 @@ texture = ExtResource("16_g2fou")
 offset = Vector2(0, -99.945)
 
 [node name="Crate1Damaged2" type="Sprite2D" parent="Background Objects/Node2D"]
+visible = false
 position = Vector2(1379.5, 394.445)
 texture = ExtResource("15_7ovm5")
 offset = Vector2(0, -99.945)
 
 [node name="PoleAxe2" type="Sprite2D" parent="Background Objects/Node2D"]
+visible = false
 position = Vector2(947, 280)
 texture = ExtResource("17_ikotg")
 
@@ -3273,22 +3294,27 @@ theme_override_font_sizes/font_size = 12
 text = "DONT FALL"
 
 [node name="WeaponRack" type="Sprite2D" parent="Bg Objects infront Tile map"]
+visible = false
 position = Vector2(2931, 243)
 texture = ExtResource("25_sq7iv")
 
 [node name="Potion3" type="Sprite2D" parent="Bg Objects infront Tile map"]
+visible = false
 position = Vector2(1902, 231)
 texture = ExtResource("25_tle46")
 
 [node name="PoleAxe" type="Sprite2D" parent="Bg Objects infront Tile map"]
+visible = false
 position = Vector2(1822, 218)
 texture = ExtResource("17_ikotg")
 
 [node name="BarrelDamaged" type="Sprite2D" parent="Bg Objects infront Tile map"]
+visible = false
 position = Vector2(1821, 228)
 texture = ExtResource("26_comuv")
 
 [node name="Bag2" type="Sprite2D" parent="Bg Objects infront Tile map"]
+visible = false
 position = Vector2(1860, 229)
 texture = ExtResource("40_mv7pg")
 
@@ -3307,6 +3333,7 @@ position = Vector2(2580, 217)
 texture = ExtResource("32_raolv")
 
 [node name="Bag3" type="Sprite2D" parent="Bg Objects infront Tile map"]
+visible = false
 position = Vector2(2963, 245)
 texture = ExtResource("40_mv7pg")
 

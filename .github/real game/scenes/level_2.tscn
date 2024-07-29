@@ -4042,12 +4042,12 @@ layer_0/tile_data = PackedInt32Array(1245184, 3145728, 3, 1245185, 3211264, 3, 1
 [node name="Bag1" type="Sprite2D" parent="LevelObjects"]
 position = Vector2(1414, 437)
 texture = ExtResource("8_m0ypn")
-offset = Vector2(-190.46, 0)
+offset = Vector2(-190.46, 5.3)
 
 [node name="Bag2" type="Sprite2D" parent="LevelObjects"]
 position = Vector2(1427, 437)
 texture = ExtResource("8_m0ypn")
-offset = Vector2(-190.46, 0)
+offset = Vector2(-190.46, 5.3)
 
 [node name="Dead1" type="Sprite2D" parent="LevelObjects"]
 position = Vector2(1384.46, 409)

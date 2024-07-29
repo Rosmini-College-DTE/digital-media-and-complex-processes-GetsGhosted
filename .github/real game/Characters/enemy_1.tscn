@@ -479,7 +479,7 @@ script = ExtResource("1_w6f0e")
 position = Vector2(-2, -1)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_sb2eq")
-animation = &"death"
+animation = &"walk"
 autoplay = "idle"
 offset = Vector2(5.7, -2.045)
 

@@ -31,7 +31,7 @@ offset_right = 942.0
 offset_bottom = 359.0
 theme_override_fonts/font = ExtResource("2_o7cwr")
 theme_override_font_sizes/font_size = 56
-text = "the kingdom conintues
+text = "the kingdom continues
 to starve in poverty"
 
 [node name="backtomenu" type="Button" parent="."]
