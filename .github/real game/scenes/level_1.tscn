@@ -3029,7 +3029,6 @@ text = "The Crusade"
 [node name="Collision Objects" type="Node2D" parent="map"]
 
 [node name="Crate3" type="Sprite2D" parent="map/Collision Objects"]
-visible = false
 position = Vector2(1239, 293)
 texture = ExtResource("24_h0bve")
 
@@ -3065,7 +3064,6 @@ metadata/_edit_use_anchors_ = true
 [node name="Node2D" type="Node2D" parent="Background Objects"]
 
 [node name="Sword2" type="Sprite2D" parent="Background Objects/Node2D"]
-visible = false
 position = Vector2(1654, 238)
 texture = ExtResource("6_8rugp")
 
@@ -3082,7 +3080,6 @@ position = Vector2(355, 300)
 texture = ExtResource("41_g1550")
 
 [node name="Barrel" type="Sprite2D" parent="Background Objects/Node2D"]
-visible = false
 position = Vector2(682, 287)
 texture = ExtResource("7_sffud")
 
@@ -3148,7 +3145,6 @@ texture = ExtResource("16_g2fou")
 offset = Vector2(0, -99.945)
 
 [node name="Crate1Damaged2" type="Sprite2D" parent="Background Objects/Node2D"]
-visible = false
 position = Vector2(1379.5, 394.445)
 texture = ExtResource("15_7ovm5")
 offset = Vector2(0, -99.945)
@@ -3338,7 +3334,19 @@ position = Vector2(2963, 245)
 texture = ExtResource("40_mv7pg")
 
 [node name="Bag1" type="Sprite2D" parent="Bg Objects infront Tile map"]
-position = Vector2(2908, 245)
+position = Vector2(2918, 251)
+texture = ExtResource("41_g1550")
+
+[node name="Bag4" type="Sprite2D" parent="Bg Objects infront Tile map"]
+position = Vector2(2935, 251)
+texture = ExtResource("41_g1550")
+
+[node name="Bag5" type="Sprite2D" parent="Bg Objects infront Tile map"]
+position = Vector2(2950, 251)
+texture = ExtResource("41_g1550")
+
+[node name="Bag6" type="Sprite2D" parent="Bg Objects infront Tile map"]
+position = Vector2(2967, 251)
 texture = ExtResource("41_g1550")
 
 [node name="Level NPCS_Characters" type="Node" parent="."]
@@ -3397,7 +3405,7 @@ dialogue_resource = ExtResource("39_t6tdv")
 dialogue_start = "supply"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level NPCS_Characters/Door/Actionable4"]
-position = Vector2(2, 12)
+position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_m78si")
 
 [node name="Player" parent="Level NPCS_Characters" instance=ExtResource("3_u8vwm")]
@@ -3418,15 +3426,19 @@ remote_path = NodePath("../Camera2D")
 [node name="EnemyGroup" type="Node" parent="Level NPCS_Characters"]
 
 [node name="Enemy1" parent="Level NPCS_Characters/EnemyGroup" instance=ExtResource("40_hkfao")]
+visible = false
 position = Vector2(2638, 236)
 
 [node name="Enemy2" parent="Level NPCS_Characters/EnemyGroup" instance=ExtResource("40_hkfao")]
+visible = false
 position = Vector2(2739, 236)
 
 [node name="Enemy3" parent="Level NPCS_Characters/EnemyGroup" instance=ExtResource("40_hkfao")]
+visible = false
 position = Vector2(2841, 236)
 
 [node name="Enemy4" parent="Level NPCS_Characters/EnemyGroup" instance=ExtResource("40_hkfao")]
+visible = false
 position = Vector2(2923, 234)
 
 [node name="barrier2" type="Node" parent="."]
