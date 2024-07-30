@@ -1,7 +1,10 @@
 ~ supply
 	
-Campaign: These are the supplies. From here theres no turning back.
-- Open Door
+Campaign: These are the supplies. From here theres no turning back. The Kingdom needs you.
+TIP: You don't need to fight every enemy you come across, feel free to dodge or evade skeletons.
+TIP: DO NOT fall into the caves, and do not let your health bar reach zero.
+Campaign: Goodluck.
+- Begin Campaign
 	do wait(2)
 	do Globals.onSwitchScene()
 
