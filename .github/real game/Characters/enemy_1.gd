@@ -4,7 +4,7 @@ var speed = 45 #the higher the value, the slower it runs
 var player_chase = false
 var player = null
 
-var health = 80
+var health = 150
 var player_inattack_zone = false
 var can_take_damage = true
 
@@ -17,6 +17,7 @@ var time_since_last_attack = 0.0
 
 func _physics_process(delta):
 	deal_with_damage()
+	update_health()
 	
 	# Add the gravity.
 	if not is_on_floor():
@@ -84,3 +85,15 @@ func attack():
 		# Assume player has a method to take damage
 		if player.has_method("take_damage"):
 			player.take_damage(10) # Example damage value
+			
+			
+func update_health():
+	var healthbar = $healthbar
+	
+	
+	healthbar.value = health
+	if health >= 100:
+		healthbar.visible = false
+	else:
+		healthbar.visible = true
+

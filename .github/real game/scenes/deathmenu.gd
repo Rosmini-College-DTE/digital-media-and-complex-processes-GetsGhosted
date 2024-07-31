@@ -3,7 +3,10 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$bigfade.play("bigfadein")
+	$type1.play("fade in")
+	$fade1.play("fadein1")
+	$fadebuttons.play("fadebutton1")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -39,6 +39,7 @@ func _unhandled_input(_event: InputEvent) -> void:  #interact function
 func _physics_process(delta):
 	enemy_attack()
 	attack()
+	update_health()
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -162,7 +163,7 @@ func _on_player_hitbox_body_exited(body):
 func enemy_attack():
 	if enemy_inattack_range and enemy_attack_cooldown == true:
 		#$AnimatedSprite2D.play("hit")
-		health = health - 10
+		health = health - 20
 		enemy_attack_cooldown = false
 		$AttackCooldown.start()
 		print(health,"HP")
@@ -188,3 +189,26 @@ func _on_deal_attack_timer_timeout():
 	$DealAttackTimer.stop()
 	Globals.player_current_attack = false
 	attack_ip = false
+
+func update_health():
+	var healthbar = $healthbar
+	healthbar.value = health
+	
+	if health >= 100:
+		healthbar.visible = false
+	else:
+		healthbar.visible = true
+
+func _on_regen_timer_timeout():
+	if health < 100:
+		health = health + 5
+		if health > 100:
+			health = 100
+	if health <= 0:
+		health = 0
+	
+	
+	
+	
+	
+	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b8pvrc0df6evm"]
+[gd_scene load_steps=19 format=3 uid="uid://b8pvrc0df6evm"]
 
 [ext_resource type="Texture2D" uid="uid://bo2p6mr4eju11" path="res://Art & Assets/PixelFantasy_Caves_1.0/bg1contr.png" id="1_c6n7o"]
 [ext_resource type="PackedScene" uid="uid://6qm3grhx0gx2" path="res://Characters/player.tscn" id="1_ebfd7"]
@@ -16,10 +16,6 @@
 [sub_resource type="Animation" id="Animation_ym84c"]
 resource_name = "fade out"
 length = 5.0
-
-[sub_resource type="Animation" id="Animation_fhm3l"]
-resource_name = "fade_out"
-length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -27,7 +23,7 @@ tracks/0/path = NodePath("fadeoutdeath/ColorRect:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.1, 2),
+"times": PackedFloat32Array(0.1, 1.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -35,8 +31,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i5mdd"]
 _data = {
-"fade out": SubResource("Animation_ym84c"),
-"fade_out": SubResource("Animation_fhm3l")
+"fade out": SubResource("Animation_ym84c")
 }
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_udap1"]
@@ -4056,9 +4051,6 @@ sources/1 = SubResource("TileSetAtlasSource_d52cv")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dog46"]
 size = Vector2(15041, 51)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_105ww"]
-size = Vector2(12713, 214)
-
 [node name="level_2" type="Node2D"]
 script = ExtResource("1_mawn7")
 
@@ -4074,7 +4066,6 @@ offset_top = -1199.0
 offset_right = 15156.0
 offset_bottom = 19091.0
 color = Color(0, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -4429,16 +4420,7 @@ position = Vector2(2126, 680)
 script = ExtResource("11_ok0xv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone_Void/Area2D"]
-position = Vector2(2665, 3691)
+position = Vector2(2566.5, 664)
 shape = SubResource("RectangleShape2D_dog46")
 
-[node name="fadeOutzone" type="Node" parent="."]
-
-[node name="fadeshape" type="Area2D" parent="fadeOutzone"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fadeOutzone/fadeshape"]
-position = Vector2(4399, 1112)
-shape = SubResource("RectangleShape2D_105ww")
-
 [connection signal="area_entered" from="DeathZone_Void/Area2D" to="DeathZone_Void/Area2D" method="_on_area_entered"]
-[connection signal="area_entered" from="fadeOutzone/fadeshape" to="." method="_on_fadeshape_area_entered"]

@@ -1,8 +1,91 @@
-[gd_scene load_steps=4 format=3 uid="uid://syupjo1xhki7"]
+[gd_scene load_steps=12 format=3 uid="uid://syupjo1xhki7"]
 
 [ext_resource type="Texture2D" uid="uid://81on26belfq6" path="res://Art & Assets/Assets 1024 Cave/Square - Black.jpg" id="1_ffbi4"]
 [ext_resource type="Script" path="res://scenes/deathmenu.gd" id="1_jb4qb"]
 [ext_resource type="FontFile" uid="uid://b1c2n0pdq0xot" path="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/HV-Reg.otf" id="2_o7cwr"]
+
+[sub_resource type="Animation" id="Animation_6gfw7"]
+resource_name = "bigfadein"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bigfade/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y02c5"]
+_data = {
+"bigfadein": SubResource("Animation_6gfw7")
+}
+
+[sub_resource type="Animation" id="Animation_vwl5q"]
+resource_name = "fadebutton1"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fadebuttons/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(8, 11.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fepkw"]
+_data = {
+"fadebutton1": SubResource("Animation_vwl5q")
+}
+
+[sub_resource type="Animation" id="Animation_oj4ix"]
+resource_name = "fade in"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("type1/you died:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.4, 2),
+"transitions": PackedFloat32Array(1, 0.554785),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hntg4"]
+_data = {
+"fade in": SubResource("Animation_oj4ix")
+}
+
+[sub_resource type="Animation" id="Animation_qaxe1"]
+resource_name = "fadein1"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fade1/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(3.6, 8.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rpseo"]
+_data = {
+"fadein1": SubResource("Animation_qaxe1")
+}
 
 [node name="deathmenu" type="Node2D"]
 script = ExtResource("1_jb4qb")
@@ -14,7 +97,74 @@ offset_right = 1189.0
 offset_bottom = 840.0
 texture = ExtResource("1_ffbi4")
 
-[node name="Label" type="Label" parent="."]
+[node name="mission failed" type="Label" parent="."]
+offset_left = 358.0
+offset_top = 383.0
+offset_right = 764.0
+offset_bottom = 427.0
+rotation = 0.102974
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_o7cwr")
+theme_override_font_sizes/font_size = 48
+text = "mission failed"
+
+[node name="bigfade" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_y02c5")
+}
+
+[node name="ColorRect" type="ColorRect" parent="bigfade"]
+offset_left = -370.0
+offset_top = -74.0
+offset_right = 1577.0
+offset_bottom = 733.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="fadebuttons" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fepkw")
+}
+
+[node name="ColorRect" type="ColorRect" parent="fadebuttons"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_top = -0.0354938
+anchor_right = 0.00520833
+offset_left = 157.0
+offset_top = 398.0
+offset_right = 1007.0
+offset_bottom = 641.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="backtomenu" type="Button" parent="."]
+offset_left = 278.0
+offset_top = 474.0
+offset_right = 899.0
+offset_bottom = 545.0
+theme_override_colors/font_hover_color = Color(0.190818, 0.335161, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_o7cwr")
+theme_override_font_sizes/font_size = 70
+text = "Back to Menu"
+
+[node name="quit" type="Button" parent="."]
+offset_left = 387.0
+offset_top = 552.0
+offset_right = 778.0
+offset_bottom = 614.0
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_o7cwr")
+theme_override_font_sizes/font_size = 60
+text = "Quit"
+
+[node name="type1" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hntg4")
+}
+
+[node name="you died" type="Label" parent="type1"]
 offset_left = 315.0
 offset_top = 112.0
 offset_right = 832.0
@@ -23,37 +173,34 @@ theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_o7cwr")
 theme_override_font_sizes/font_size = 104
 text = "You Died"
+visible_characters = 1
+visible_ratio = 0.166667
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 228.0
-offset_top = 254.0
-offset_right = 942.0
-offset_bottom = 359.0
+offset_left = 207.0
+offset_top = 220.0
+offset_right = 921.0
+offset_bottom = 379.0
 theme_override_fonts/font = ExtResource("2_o7cwr")
-theme_override_font_sizes/font_size = 56
-text = "the kingdom continues
-to starve in poverty"
+theme_override_font_sizes/font_size = 54
+text = "the kingdom rots
+in poverty with 
+no savior"
+horizontal_alignment = 1
 
-[node name="backtomenu" type="Button" parent="."]
-offset_left = 251.0
-offset_top = 432.0
-offset_right = 907.0
-offset_bottom = 521.0
-theme_override_colors/font_hover_color = Color(0.190818, 0.335161, 1, 1)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_o7cwr")
-theme_override_font_sizes/font_size = 90
-text = "Back to Menu"
+[node name="fade1" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rpseo")
+}
 
-[node name="quit" type="Button" parent="."]
-offset_left = 364.0
-offset_top = 554.0
-offset_right = 804.0
-offset_bottom = 634.0
-theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_o7cwr")
-theme_override_font_sizes/font_size = 80
-text = "Quit"
+[node name="ColorRect" type="ColorRect" parent="fade1"]
+self_modulate = Color(1, 1, 1, 0.0980392)
+offset_left = 190.0
+offset_top = 199.0
+offset_right = 958.0
+offset_bottom = 387.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="backtomenu" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

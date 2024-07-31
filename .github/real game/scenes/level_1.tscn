@@ -46,66 +46,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eqjtb"]
 size = Vector2(69, 22)
 
-[sub_resource type="Animation" id="Animation_a2ykg"]
-resource_name = "fade_in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Transition/ColorRect:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Transition/ColorRect:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(1.1),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_ox3l0"]
-resource_name = "fade_out"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Transition/ColorRect:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.1, 0.9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Transition/ColorRect:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.1),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_xk8hm"]
-_data = {
-"fade_in": SubResource("Animation_a2ykg"),
-"fade_out": SubResource("Animation_ox3l0")
-}
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_cmwbv"]
 atlas = ExtResource("16_sj7pv")
 region = Rect2(0, 0, 120, 80)
@@ -2903,6 +2843,54 @@ size = Vector2(64, 172)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ytxt1"]
 size = Vector2(1328, 51)
 
+[sub_resource type="Animation" id="Animation_a2ykg"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ox3l0"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xk8hm"]
+_data = {
+"fade_in": SubResource("Animation_a2ykg"),
+"fade_out": SubResource("Animation_ox3l0")
+}
+
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_mquxw")
 
@@ -3038,26 +3026,6 @@ position = Vector2(3, -6)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="map/Collision Objects/Crate3/StaticBody2D"]
 position = Vector2(-2.5, 6)
 shape = SubResource("RectangleShape2D_eqjtb")
-
-[node name="Transition" type="AnimationPlayer" parent="."]
-root_node = NodePath("../Level NPCS_Characters/Player/Camera2D")
-libraries = {
-"": SubResource("AnimationLibrary_xk8hm")
-}
-
-[node name="ColorRect" type="ColorRect" parent="Transition"]
-visible = false
-anchors_preset = -1
-anchor_left = -0.676215
-anchor_top = -0.410494
-anchor_right = 0.0321181
-anchor_bottom = -0.029321
-offset_left = -140.0
-offset_top = -67.0
-offset_right = 1086.0
-offset_bottom = 667.0
-color = Color(0, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
 
 [node name="Background Objects" type="Node2D" parent="."]
 
@@ -3427,16 +3395,16 @@ remote_path = NodePath("../Camera2D")
 [node name="EnemyGroup" type="Node" parent="Level NPCS_Characters"]
 
 [node name="Enemy1" parent="Level NPCS_Characters/EnemyGroup" instance=ExtResource("40_hkfao")]
-position = Vector2(2649, 232)
+position = Vector2(2610, 235)
 
 [node name="Enemy2" parent="Level NPCS_Characters/EnemyGroup" instance=ExtResource("40_hkfao")]
-position = Vector2(2735, 234)
+position = Vector2(2688, 235)
 
 [node name="Enemy3" parent="Level NPCS_Characters/EnemyGroup" instance=ExtResource("40_hkfao")]
-position = Vector2(2841, 236)
+position = Vector2(2780, 237)
 
 [node name="Enemy4" parent="Level NPCS_Characters/EnemyGroup" instance=ExtResource("40_hkfao")]
-position = Vector2(2923, 234)
+position = Vector2(2872, 235)
 
 [node name="barrier2" type="Node" parent="."]
 
@@ -3461,5 +3429,25 @@ shape = SubResource("RectangleShape2D_ytxt1")
 stream = ExtResource("42_t2p1j")
 volume_db = -12.741
 autoplay = true
+
+[node name="Transition" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Level NPCS_Characters/Player/Camera2D")
+libraries = {
+"": SubResource("AnimationLibrary_xk8hm")
+}
+
+[node name="ColorRect" type="ColorRect" parent="Transition"]
+self_modulate = Color(0, 0, 0, 1)
+anchors_preset = -1
+anchor_left = -0.194444
+anchor_top = 0.087963
+anchor_right = -0.750868
+anchor_bottom = -0.436728
+offset_left = -140.0
+offset_top = -67.0
+offset_right = 1086.0
+offset_bottom = 667.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [connection signal="area_entered" from="DeathZone_Void/Area2D" to="DeathZone_Void/Area2D" method="_on_area_entered"]
