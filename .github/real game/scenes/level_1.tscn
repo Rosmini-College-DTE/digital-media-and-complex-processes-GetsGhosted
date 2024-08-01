@@ -3439,8 +3439,8 @@ libraries = {
 [node name="ColorRect" type="ColorRect" parent="Transition"]
 self_modulate = Color(0, 0, 0, 1)
 anchors_preset = -1
-anchor_left = -0.194444
-anchor_top = 0.087963
+anchor_left = -0.750868
+anchor_top = -0.436728
 anchor_right = -0.750868
 anchor_bottom = -0.436728
 offset_left = -140.0
