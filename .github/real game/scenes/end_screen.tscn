@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d3xl8m6lvh6nv"]
+[gd_scene load_steps=18 format=3 uid="uid://d3xl8m6lvh6nv"]
 
 [ext_resource type="Script" path="res://scenes/end_screen.gd" id="1_jb8uw"]
 [ext_resource type="FontFile" uid="uid://b1c2n0pdq0xot" path="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/HV-Reg.otf" id="1_ng55i"]
@@ -109,6 +109,48 @@ _data = {
 "right": SubResource("Animation_spknf")
 }
 
+[sub_resource type="Animation" id="Animation_cktqe"]
+resource_name = "fadeverse"
+length = 200.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bibleverse/galatians:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(95.6, 101.8, 106.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rqg2p"]
+_data = {
+"fadeverse": SubResource("Animation_cktqe")
+}
+
+[sub_resource type="Animation" id="Animation_np7t3"]
+resource_name = "charityfade"
+length = 200.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("charity/thelaw:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(107.2, 111.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8j3b7"]
+_data = {
+"charityfade": SubResource("Animation_np7t3")
+}
+
 [node name="EndScreen" type="Node2D"]
 script = ExtResource("1_jb8uw")
 
@@ -161,9 +203,9 @@ libraries = {
 
 [node name="middle" type="Label" parent="creditmiddle"]
 offset_left = 359.0
-offset_top = 927.0
+offset_top = -4512.0
 offset_right = 776.0
-offset_bottom = 5352.0
+offset_bottom = -87.0
 theme_override_fonts/font = ExtResource("1_ng55i")
 theme_override_font_sizes/font_size = 36
 text = "credits
@@ -432,9 +474,9 @@ libraries = {
 
 [node name="right" type="Label" parent="creditRightSide"]
 offset_left = 593.0
-offset_top = 700.085
+offset_top = -4508.0
 offset_right = 1099.0
-offset_bottom = 4873.08
+offset_bottom = -191.0
 theme_override_fonts/font = ExtResource("1_ng55i")
 theme_override_font_sizes/font_size = 36
 text = "a 2d godot game
@@ -563,3 +605,38 @@ horizontal_alignment = 1
 stream = ExtResource("3_aq3u8")
 volume_db = -10.0
 autoplay = true
+
+[node name="bibleverse" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rqg2p")
+}
+
+[node name="galatians" type="Label" parent="bibleverse"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 12.0
+offset_top = 239.0
+offset_right = 1134.0
+offset_bottom = 424.0
+theme_override_fonts/font = ExtResource("1_ng55i")
+theme_override_font_sizes/font_size = 48
+text = "Galatians 6:2
+Carry each other’s burdens, 
+and in this way you will fulfill 
+the law of Christ."
+horizontal_alignment = 1
+
+[node name="charity" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8j3b7")
+}
+
+[node name="thelaw" type="Label" parent="charity"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 198.0
+offset_top = 294.0
+offset_right = 952.0
+offset_bottom = 338.0
+theme_override_fonts/font = ExtResource("1_ng55i")
+theme_override_font_sizes/font_size = 48
+text = "\"charity fulfills the law\""
+horizontal_alignment = 1

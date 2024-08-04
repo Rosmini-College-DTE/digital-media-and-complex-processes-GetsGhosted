@@ -8,6 +8,8 @@ func _ready():
 	$creditLeftSide.play("left")
 	$creditRightSide.play("right")
 	$creditmiddle.play("middle")
+	$bibleverse.play("fadeverse")
+	$charity.play("charityfade")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
