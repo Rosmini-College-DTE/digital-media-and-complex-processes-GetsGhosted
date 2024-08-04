@@ -1,0 +1,565 @@
+[gd_scene load_steps=14 format=3 uid="uid://d3xl8m6lvh6nv"]
+
+[ext_resource type="Script" path="res://scenes/end_screen.gd" id="1_jb8uw"]
+[ext_resource type="FontFile" uid="uid://b1c2n0pdq0xot" path="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/HV-Reg.otf" id="1_ng55i"]
+[ext_resource type="AudioStream" uid="uid://bena3xnyqdfcg" path="res://Music/credits.mp3" id="3_aq3u8"]
+
+[sub_resource type="Animation" id="Animation_flpby"]
+resource_name = "fadetext1"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("text1/Label:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.09, 4.59, 7.99),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yvcth"]
+_data = {
+"fadetext1": SubResource("Animation_flpby")
+}
+
+[sub_resource type="Animation" id="Animation_hdsvj"]
+resource_name = "fadetext2"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("text2/label:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(9.1, 13.1, 16.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lnfd5"]
+_data = {
+"fadetext2": SubResource("Animation_hdsvj")
+}
+
+[sub_resource type="Animation" id="Animation_nukcc"]
+resource_name = "middle"
+length = 300.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("creditmiddle/middle:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(17, 27, 37, 47, 57, 67, 77, 87, 97, 107),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(359, 927), Vector2(359, 227), Vector2(359, -473), Vector2(359, -1173), Vector2(359, -1873), Vector2(359, -2573), Vector2(359, -3273), Vector2(359, -3973), Vector2(359, -4673), Vector2(359, -5373)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dh10b"]
+_data = {
+"middle": SubResource("Animation_nukcc")
+}
+
+[sub_resource type="Animation" id="Animation_5besw"]
+resource_name = "left"
+length = 300.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("creditLeftSide/left:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(17, 27, 37, 47, 57, 67, 77, 87, 97, 107),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(84, 700.085), Vector2(84, 0), Vector2(84, -700), Vector2(84, -1400), Vector2(84, -2100), Vector2(84, -2800), Vector2(84, -3500), Vector2(84, -4200), Vector2(84, -4900), Vector2(84, -5600)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cylao"]
+_data = {
+"left": SubResource("Animation_5besw")
+}
+
+[sub_resource type="Animation" id="Animation_spknf"]
+resource_name = "right"
+length = 300.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("creditRightSide/right:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(17, 27, 37, 47, 57, 67, 77, 87, 97, 107),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(593, 700.085), Vector2(593, 0), Vector2(593, -700), Vector2(593, -1400), Vector2(593, -2100), Vector2(593, -2800), Vector2(593, -3500), Vector2(593, -4200), Vector2(593, -4900), Vector2(593, -5600)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2hy48"]
+_data = {
+"right": SubResource("Animation_spknf")
+}
+
+[node name="EndScreen" type="Node2D"]
+script = ExtResource("1_jb8uw")
+
+[node name="background" type="ColorRect" parent="."]
+offset_left = -32.0
+offset_top = -27.0
+offset_right = 1188.0
+offset_bottom = 679.0
+color = Color(0, 0, 0, 1)
+
+[node name="text1" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yvcth")
+}
+
+[node name="Label" type="Label" parent="text1"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -423.0
+offset_top = 265.0
+offset_right = 1551.0
+offset_bottom = 379.0
+theme_override_fonts/font = ExtResource("1_ng55i")
+theme_override_font_sizes/font_size = 40
+text = "You succesfully made it through 
+the caves and delivered the crops to 
+the kingdom"
+horizontal_alignment = 1
+
+[node name="text2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lnfd5")
+}
+
+[node name="label" type="Label" parent="text2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -112.0
+offset_top = 291.0
+offset_right = 1280.0
+offset_bottom = 382.0
+theme_override_fonts/font = ExtResource("1_ng55i")
+theme_override_font_sizes/font_size = 48
+text = "the people are forever 
+grateful for your service"
+horizontal_alignment = 1
+
+[node name="creditmiddle" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dh10b")
+}
+
+[node name="middle" type="Label" parent="creditmiddle"]
+offset_left = 359.0
+offset_top = 927.0
+offset_right = 776.0
+offset_bottom = 5352.0
+theme_override_fonts/font = ExtResource("1_ng55i")
+theme_override_font_sizes/font_size = 36
+text = "credits
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+development
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+asset insripation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+all imported
+assets have been
+heavily tweaked or
+completely remade
+
+
+
+
+
+
+
+music
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+thank you for 
+playing!"
+horizontal_alignment = 1
+
+[node name="creditLeftSide" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cylao")
+}
+
+[node name="left" type="Label" parent="creditLeftSide"]
+offset_left = 84.0
+offset_top = 700.085
+offset_right = 524.0
+offset_bottom = 4909.08
+theme_override_fonts/font = ExtResource("1_ng55i")
+theme_override_font_sizes/font_size = 36
+text = "solo crusade
+
+
+
+
+
+
+
+
+
+developer
+
+
+progammer
+
+
+project manager
+
+
+music producer
+
+
+storywriter
+
+
+script
+
+
+planning
+
+
+
+
+
+
+physics
+
+
+movement
+
+
+healthbars
+
+
+healing
+
+
+controls
+
+
+combat
+
+
+enemy
+
+
+npcs
+
+
+dialogue
+
+
+
+
+
+level 1 tilemap
+
+
+decorations
+
+
+level 2 tilemap
+
+
+skeleton
+
+
+knights
+
+
+imported from
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+awakening 
+(main menu)
+
+
+have your resolution
+(level 1/epilogue)
+
+
+deep paralysis
+(level 2/campgain)
+
+
+fallen comrade
+(death menu)
+
+
+final contract
+(end credits)
+
+
+sound effects"
+horizontal_alignment = 1
+
+[node name="creditRightSide" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2hy48")
+}
+
+[node name="right" type="Label" parent="creditRightSide"]
+offset_left = 593.0
+offset_top = 700.085
+offset_right = 1099.0
+offset_bottom = 4873.08
+theme_override_fonts/font = ExtResource("1_ng55i")
+theme_override_font_sizes/font_size = 36
+text = "a 2d godot game
+
+
+
+
+
+
+
+
+
+jonas liwanag
+
+
+jonas liwanag
+
+
+jonas liwanag
+
+
+jonas liwanag
+
+
+jonas liwanag
+
+
+jonas liwanag
+
+
+jonas liwanag
+
+
+
+
+
+
+jonas liwanag
+
+
+jonas liwanag
+
+
+jonas liwanag
+
+
+jonas liwanag
+
+
+jonas liwanag
+
+
+jonas liwanag
+
+
+jonas liwanag
+
+
+jonas liwanag
+
+
+jonas liwanag
+
+
+
+
+
+brullov
+
+
+brullov
+
+
+szadiart
+
+
+jesse-m
+
+
+aamatniekss
+
+
+itch.io
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+jonas liwanag
+
+
+
+jonas liwanag
+
+
+
+jonas liwanag
+
+
+
+jonas liwanag
+
+
+
+jonas liwanag
+
+
+
+jonas liwanag"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_aq3u8")
+volume_db = -10.0
+autoplay = true

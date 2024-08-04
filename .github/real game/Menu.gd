@@ -6,6 +6,8 @@ var level1 = preload("res://scenes/level_1.tscn")
 func _process(delta):
 	position += (get_global_mouse_position()*delta)-position
 
+func _ready():
+	$fadein.play("fadein")
 
 func _on_play_pressed():
 	transition.play("fade_out")

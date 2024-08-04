@@ -1,0 +1,10 @@
+~ endlevel2
+
+Campaign: You made it, this elevator will take you back to the surface.
+Campaign: They're waiting for you up there, good work soldier.
+- Enter Elevator
+	do wait(2)
+	do Globals.onSwitchToEndScreen()
+	do fade_music()
+
+=> END

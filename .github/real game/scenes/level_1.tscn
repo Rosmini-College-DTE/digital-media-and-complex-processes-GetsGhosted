@@ -3427,7 +3427,7 @@ shape = SubResource("RectangleShape2D_ytxt1")
 
 [node name="Have Your Resolution" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("42_t2p1j")
-volume_db = -12.741
+volume_db = -10.0
 autoplay = true
 
 [node name="Transition" type="AnimationPlayer" parent="."]

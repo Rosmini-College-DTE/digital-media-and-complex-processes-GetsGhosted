@@ -6,5 +6,8 @@ var playerAlive : bool
 
 func onSwitchScene():
 	get_tree().change_scene_to_file("res://scenes/level_2.tscn")
+	
+func onSwitchToEndScreen():
+	get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
 
 	

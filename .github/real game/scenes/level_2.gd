@@ -17,6 +17,8 @@ func _process(delta):
 func _on_transition_animation_finished(fade_out):
 	get_tree().change_scene_to_packed(deathmenu)
 
+func fade_music():
+	$musicfade.play("musicfade")
 
 func _on_fadeshape_area_entered(area):
 	$fadeoutdeath.play("fade_out")
