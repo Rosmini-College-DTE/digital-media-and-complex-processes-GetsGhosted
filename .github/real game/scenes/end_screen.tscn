@@ -203,9 +203,9 @@ libraries = {
 
 [node name="middle" type="Label" parent="creditmiddle"]
 offset_left = 359.0
-offset_top = -4512.0
+offset_top = 927.0
 offset_right = 776.0
-offset_bottom = -87.0
+offset_bottom = 5352.0
 theme_override_fonts/font = ExtResource("1_ng55i")
 theme_override_font_sizes/font_size = 36
 text = "credits
@@ -474,9 +474,9 @@ libraries = {
 
 [node name="right" type="Label" parent="creditRightSide"]
 offset_left = 593.0
-offset_top = -4508.0
+offset_top = 700.085
 offset_right = 1099.0
-offset_bottom = -191.0
+offset_bottom = 5017.08
 theme_override_fonts/font = ExtResource("1_ng55i")
 theme_override_font_sizes/font_size = 36
 text = "a 2d godot game
