@@ -162,6 +162,7 @@ monsters along your journey"
 horizontal_alignment = 1
 
 [node name="text5" type="Label" parent="cutsceneAnimation"]
+self_modulate = Color(1, 1, 1, 0)
 offset_left = -1249.0
 offset_top = 179.0
 offset_right = 2365.0
@@ -177,6 +178,7 @@ become like the noonday."
 horizontal_alignment = 1
 
 [node name="continue" type="Button" parent="cutsceneAnimation"]
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 443.0
 offset_top = 531.0
 offset_right = 683.0

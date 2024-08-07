@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://syupjo1xhki7"]
+[gd_scene load_steps=17 format=3 uid="uid://syupjo1xhki7"]
 
 [ext_resource type="Texture2D" uid="uid://81on26belfq6" path="res://Art & Assets/Assets 1024 Cave/Square - Black.jpg" id="1_ffbi4"]
 [ext_resource type="Script" path="res://scenes/deathmenu.gd" id="1_jb4qb"]
@@ -107,6 +107,27 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mja0u"]
 _data = {
 "fadeout": SubResource("Animation_nxu3k")
+}
+
+[sub_resource type="Animation" id="Animation_w5dui"]
+resource_name = "tryagainfade"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tryagain/tryagain:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.7, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_741q7"]
+_data = {
+"tryagainfade": SubResource("Animation_w5dui")
 }
 
 [node name="deathmenu" type="Node2D"]
@@ -242,5 +263,19 @@ stream = ExtResource("4_ba3b4")
 volume_db = -10.0
 autoplay = true
 
+[node name="tryagain" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_741q7")
+}
+
+[node name="tryagain" type="Button" parent="tryagain"]
+offset_top = 1.0
+offset_right = 206.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("2_o7cwr")
+theme_override_font_sizes/font_size = 36
+text = "try again"
+
 [connection signal="pressed" from="backtomenu" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="tryagain/tryagain" to="." method="_on_tryagain_pressed"]

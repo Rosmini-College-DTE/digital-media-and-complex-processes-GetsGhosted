@@ -5,6 +5,7 @@ var mainMenu = preload("res://scenes/menu.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$tryagain.play("tryagainfade")
 	$bigfade.play("bigfadein")
 	$type1.play("fade in")
 	$fade1.play("fadein1")
@@ -23,3 +24,7 @@ func _on_fadeout_animation_finished(fadeout):
 
 func _on_quit_pressed():
 	get_tree().quit()
+
+
+func _on_tryagain_pressed():
+	get_tree().change_scene_to_file("res://scenes/cutscene_1.tscn")
