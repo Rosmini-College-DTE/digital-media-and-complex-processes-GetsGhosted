@@ -9,5 +9,6 @@ func _ready():
 	transition.play("fade_in")
 
 func _on_back_to_menu_pressed():
+	$button1.play()
 	self.hide()
 

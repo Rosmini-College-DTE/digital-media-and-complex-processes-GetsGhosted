@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://y4fffm25mvb"]
+[gd_scene load_steps=10 format=3 uid="uid://y4fffm25mvb"]
 
 [ext_resource type="Script" path="res://scenes/options_menu.gd" id="1_4juau"]
 [ext_resource type="Texture2D" uid="uid://bo2p6mr4eju11" path="res://Art & Assets/PixelFantasy_Caves_1.0/bg1contr.png" id="2_6p4vh"]
 [ext_resource type="FontFile" uid="uid://b1c2n0pdq0xot" path="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/HV-Reg.otf" id="3_yptyr"]
 [ext_resource type="Texture2D" uid="uid://d08n5jox3sdlp" path="res://Art & Assets/PixelFantasy_Caves_1.0/background3.png" id="4_02o5o"]
 [ext_resource type="Script" path="res://scenes/Background0.gd" id="4_g0njm"]
+[ext_resource type="AudioStream" uid="uid://bbaff8lxb7otc" path="res://Music/b3.mp3" id="6_7vw3r"]
 
 [sub_resource type="Animation" id="Animation_a2ykg"]
 resource_name = "fade_in"
@@ -242,5 +243,9 @@ theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_yptyr")
 theme_override_font_sizes/font_size = 56
 text = "Back to Menu"
+
+[node name="button1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_7vw3r")
+volume_db = -30.0
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back to Menu" to="." method="_on_back_to_menu_pressed"]

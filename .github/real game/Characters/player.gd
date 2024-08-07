@@ -9,7 +9,7 @@ var attack_ip = false
 
 @export var speed : float = 200.0
 @export var jump_velocity : float = -250.0
-@export var double_jump_velocity : float = -175.0
+@export var double_jump_velocity : float = -200.0
 
 @onready var animated_sprite : AnimatedSprite2D = $AnimatedSprite2D
 @onready var actionable_finder: Area2D = $Direction/ActionableFinder
@@ -83,7 +83,7 @@ func _on_animation_finished(anim_name):
 	if anim_name == "death" and is_dying:
 		get_tree().change_scene_to_file("res://scenes/deathmenu.tscn")
 
-func player_movement(delta):
+func player_movement(_delta):
 	
 	if Input.is_action_just_pressed("right"):
 		current_dir = "right"

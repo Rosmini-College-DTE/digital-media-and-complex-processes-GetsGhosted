@@ -6,6 +6,6 @@ TIP: DO NOT fall into the caves, and do not let your health bar reach zero.
 Campaign: Goodluck.
 - Begin Campaign
 	do wait(2)
-	do Globals.onSwitchScene()
+	do Globals.onSwitchCutScene()
 
 => END

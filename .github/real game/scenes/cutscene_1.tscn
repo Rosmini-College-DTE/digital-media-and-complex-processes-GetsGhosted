@@ -1,0 +1,214 @@
+[gd_scene load_steps=8 format=3 uid="uid://bvj85aj0ydibg"]
+
+[ext_resource type="Script" path="res://scenes/cutscene_1.gd" id="1_5ck7t"]
+[ext_resource type="FontFile" uid="uid://b1c2n0pdq0xot" path="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/HV-Reg.otf" id="1_mti7p"]
+[ext_resource type="AudioStream" uid="uid://firejqxcnwag" path="res://Music/cutscene1.mp3" id="3_de1vm"]
+[ext_resource type="AudioStream" uid="uid://bbaff8lxb7otc" path="res://Music/b3.mp3" id="4_3uarl"]
+[ext_resource type="AudioStream" uid="uid://583vqas0730b" path="res://Music/b4.mp3" id="5_onsdl"]
+
+[sub_resource type="Animation" id="Animation_86cs7"]
+resource_name = "cutscenep1"
+length = 40.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cutsceneAnimation/text1:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.1, 3.1, 6.1, 8.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("cutsceneAnimation/text2:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(8.6, 10.4, 13.2, 15.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("cutsceneAnimation/text3:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(15.7, 17.6, 23.2, 26.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("cutsceneAnimation/text4:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(18.1, 20.1, 23.1, 26.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("cutsceneAnimation/text5:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(26.3, 30.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("cutsceneAnimation/continue:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(28.8, 32.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("cutsceneAnimation/skipcutscene:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.2, 2.6, 28.6, 32.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qjatu"]
+_data = {
+"cutscenep1": SubResource("Animation_86cs7")
+}
+
+[node name="cutscene_1" type="Node2D"]
+script = ExtResource("1_5ck7t")
+
+[node name="cutsceneAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qjatu")
+}
+
+[node name="ColorRect" type="ColorRect" parent="cutsceneAnimation"]
+offset_left = -608.0
+offset_top = -304.0
+offset_right = 1722.0
+offset_bottom = 1330.0
+color = Color(0, 0, 0, 1)
+
+[node name="text1" type="Label" parent="cutsceneAnimation"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 64.0
+offset_top = 291.0
+offset_right = 1078.0
+offset_bottom = 376.0
+theme_override_fonts/font = ExtResource("1_mti7p")
+theme_override_font_sizes/font_size = 44
+text = "A Kingdom of countless lives suffers
+a great poverty. only you can save them"
+horizontal_alignment = 1
+
+[node name="text2" type="Label" parent="cutsceneAnimation"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 145.0
+offset_top = 295.0
+offset_right = 1003.0
+offset_bottom = 380.0
+theme_override_fonts/font = ExtResource("1_mti7p")
+theme_override_font_sizes/font_size = 44
+text = "you have volunteered to deliver
+the crops to supply their people"
+horizontal_alignment = 1
+
+[node name="text3" type="Label" parent="cutsceneAnimation"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 145.0
+offset_top = 275.0
+offset_right = 1029.0
+offset_bottom = 360.0
+theme_override_fonts/font = ExtResource("1_mti7p")
+theme_override_font_sizes/font_size = 44
+text = "countless lives rest in your hands"
+horizontal_alignment = 1
+
+[node name="text4" type="Label" parent="cutsceneAnimation"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 51.0
+offset_top = 324.0
+offset_right = 1117.0
+offset_bottom = 409.0
+theme_override_fonts/font = ExtResource("1_mti7p")
+theme_override_font_sizes/font_size = 44
+text = "travel through the caves and survive
+monsters along your journey"
+horizontal_alignment = 1
+
+[node name="text5" type="Label" parent="cutsceneAnimation"]
+offset_left = -1249.0
+offset_top = 179.0
+offset_right = 2365.0
+offset_bottom = 440.0
+theme_override_fonts/font = ExtResource("1_mti7p")
+theme_override_font_sizes/font_size = 44
+text = "Isaiah 58:10
+and if you spend yourselves in behalf of
+ the hungry and satisfy the needs of 
+the oppressed, then your light will rise
+ in the darkness, and your night will 
+become like the noonday."
+horizontal_alignment = 1
+
+[node name="continue" type="Button" parent="cutsceneAnimation"]
+offset_left = 443.0
+offset_top = 531.0
+offset_right = 683.0
+offset_bottom = 583.0
+theme_override_colors/font_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("1_mti7p")
+theme_override_font_sizes/font_size = 48
+text = "continue"
+
+[node name="skipcutscene" type="Button" parent="cutsceneAnimation"]
+self_modulate = Color(1, 1, 1, 0)
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_colors/font_pressed_color = Color(0, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_mti7p")
+theme_override_font_sizes/font_size = 32
+text = "skip cutscene"
+
+[node name="cutscenebackgroundmusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_de1vm")
+volume_db = -10.0
+autoplay = true
+
+[node name="continuebutton" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_3uarl")
+volume_db = -20.0
+
+[node name="skipbutton" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_onsdl")
+volume_db = -20.0
+
+[connection signal="pressed" from="cutsceneAnimation/continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="cutsceneAnimation/skipcutscene" to="." method="_on_skipcutscene_pressed"]

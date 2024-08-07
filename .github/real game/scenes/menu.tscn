@@ -1,9 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://cqn310ds07nla"]
+[gd_scene load_steps=14 format=3 uid="uid://cqn310ds07nla"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_3m6ok"]
 [ext_resource type="Texture2D" uid="uid://c8wvn45x730nd" path="res://Art & Assets/MoonGraveyard/backtweaked.png" id="2_ds8fs"]
+[ext_resource type="AudioStream" uid="uid://di6ugs3brxcnl" path="res://Music/b1.mp3" id="2_tec2g"]
 [ext_resource type="Script" path="res://scenes/Background0.gd" id="3_ckw3n"]
+[ext_resource type="AudioStream" uid="uid://t0ax5xy38sqv" path="res://Music/b2.mp3" id="3_shd68"]
 [ext_resource type="FontFile" uid="uid://b1c2n0pdq0xot" path="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/HV-Reg.otf" id="4_dy5ll"]
+[ext_resource type="AudioStream" uid="uid://583vqas0730b" path="res://Music/b4.mp3" id="5_mr4e1"]
 [ext_resource type="AudioStream" uid="uid://nh88r0ikk5ih" path="res://Music/Wake up.mp3" id="5_r856n"]
 
 [sub_resource type="Animation" id="Animation_a2ykg"]
@@ -99,6 +102,25 @@ script = ExtResource("1_3m6ok")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 323)
 
+[node name="Music_Sounds" type="Node" parent="."]
+
+[node name="playbuttonsound" type="AudioStreamPlayer" parent="Music_Sounds"]
+stream = ExtResource("2_tec2g")
+volume_db = -10.0
+
+[node name="buttonsound" type="AudioStreamPlayer" parent="Music_Sounds"]
+stream = ExtResource("3_shd68")
+volume_db = -30.0
+
+[node name="Wake Up" type="AudioStreamPlayer" parent="Music_Sounds"]
+stream = ExtResource("5_r856n")
+volume_db = -10.0
+autoplay = true
+
+[node name="quitbutton" type="AudioStreamPlayer" parent="Music_Sounds"]
+stream = ExtResource("5_mr4e1")
+volume_db = -30.0
+
 [node name="Transition" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Camera2D")
 libraries = {
@@ -107,6 +129,7 @@ libraries = {
 
 [node name="ColorRect" type="ColorRect" parent="Transition"]
 visible = false
+self_modulate = Color(1, 1, 1, 0)
 anchors_preset = -1
 anchor_right = 0.119792
 anchor_bottom = 0.114198
@@ -209,11 +232,6 @@ theme_override_fonts/font = ExtResource("4_dy5ll")
 [node name="Label5" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_dy5ll")
-
-[node name="Wake Up" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_r856n")
-volume_db = -10.0
-autoplay = true
 
 [node name="fadein" type="AnimationPlayer" parent="."]
 libraries = {

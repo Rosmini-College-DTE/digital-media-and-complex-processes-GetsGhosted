@@ -1,24 +1,12 @@
 extends Node2D
 
 @onready var transition = $Transition
-@onready var pause_menu = $Player/Camera2D/PauseMenu
 
-var paused = false
 
 func _ready():
 	transition.play("fade_in")
 
-func _process(delta):
-	if Input.is_action_just_pressed("pause"):
-		pauseMenu()
-		
-func pauseMenu():
-	if paused:
-		pause_menu.hide()
-		Engine.time_scale = 1
-	else:
-		pause_menu.show()
-		Engine.time_scale = 0
-		
-	paused = !paused
+func _process(_delta):
+	pass
+
 

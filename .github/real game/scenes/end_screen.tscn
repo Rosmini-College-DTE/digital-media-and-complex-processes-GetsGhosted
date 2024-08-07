@@ -452,6 +452,10 @@ have your resolution
 (level 1/epilogue)
 
 
+when duty calls
+(epilogue cutscene)
+
+
 deep paralysis
 (level 2/campgain)
 
@@ -598,6 +602,10 @@ jonas liwanag
 
 
 
+jonas liwanag
+
+
+
 jonas liwanag"
 horizontal_alignment = 1
 
@@ -632,9 +640,9 @@ libraries = {
 
 [node name="thelaw" type="Label" parent="charity"]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = 198.0
+offset_left = 193.0
 offset_top = 294.0
-offset_right = 952.0
+offset_right = 947.0
 offset_bottom = 338.0
 theme_override_fonts/font = ExtResource("1_ng55i")
 theme_override_font_sizes/font_size = 48
