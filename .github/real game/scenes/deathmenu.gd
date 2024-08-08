@@ -16,6 +16,7 @@ func _process(delta):
 	pass
 
 func _on_button_pressed():
+	$backsound.play()
 	$fadeout.play("fadeout")
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
@@ -27,4 +28,5 @@ func _on_quit_pressed():
 
 
 func _on_tryagain_pressed():
+	$tryagain/tryagainsound.play()
 	get_tree().change_scene_to_file("res://scenes/cutscene_1.tscn")

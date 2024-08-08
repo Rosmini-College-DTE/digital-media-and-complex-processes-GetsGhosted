@@ -458,7 +458,7 @@ script = ExtResource("1_n14di")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-55, -60)
 sprite_frames = SubResource("SpriteFrames_xbl18")
-animation = &"attack1"
+animation = &"death"
 autoplay = "idle"
 centered = false
 

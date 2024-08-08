@@ -1,9 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://syupjo1xhki7"]
+[gd_scene load_steps=19 format=3 uid="uid://syupjo1xhki7"]
 
 [ext_resource type="Texture2D" uid="uid://81on26belfq6" path="res://Art & Assets/Assets 1024 Cave/Square - Black.jpg" id="1_ffbi4"]
 [ext_resource type="Script" path="res://scenes/deathmenu.gd" id="1_jb4qb"]
 [ext_resource type="FontFile" uid="uid://b1c2n0pdq0xot" path="res://Art & Assets/HomeVideo_Font_0_8/OpenType (.otf)/HV-Reg.otf" id="2_o7cwr"]
+[ext_resource type="AudioStream" uid="uid://bbaff8lxb7otc" path="res://Music/b3.mp3" id="4_24a8f"]
 [ext_resource type="AudioStream" uid="uid://ediereigxqjq" path="res://Music/dmenu.mp3" id="4_ba3b4"]
+[ext_resource type="AudioStream" uid="uid://t0ax5xy38sqv" path="res://Music/b2.mp3" id="6_3r1fa"]
 
 [sub_resource type="Animation" id="Animation_6gfw7"]
 resource_name = "bigfadein"
@@ -170,7 +172,6 @@ libraries = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="fadebuttons"]
-self_modulate = Color(1, 1, 1, 0)
 anchors_preset = -1
 anchor_top = -0.0354938
 anchor_right = 0.00520833
@@ -191,6 +192,10 @@ theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_o7cwr")
 theme_override_font_sizes/font_size = 70
 text = "Back to Menu"
+
+[node name="backsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_24a8f")
+volume_db = -20.0
 
 [node name="quit" type="Button" parent="."]
 offset_left = 387.0
@@ -269,12 +274,17 @@ libraries = {
 }
 
 [node name="tryagain" type="Button" parent="tryagain"]
+self_modulate = Color(1, 1, 1, 0)
 offset_top = 1.0
 offset_right = 206.0
 offset_bottom = 42.0
 theme_override_fonts/font = ExtResource("2_o7cwr")
 theme_override_font_sizes/font_size = 36
 text = "try again"
+
+[node name="tryagainsound" type="AudioStreamPlayer" parent="tryagain"]
+stream = ExtResource("6_3r1fa")
+volume_db = -20.0
 
 [connection signal="pressed" from="backtomenu" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
